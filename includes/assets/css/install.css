@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+}
+
+body{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    font-family: 'Nunito Sans', 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    background-color: #eceff3;
+}
+
+a{
+    text-decoration: none;
+    color: #3dd0b5;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #1a927c;
+}
+
+a:active,
+a:focus{
+    text-decoration: none;
+    color: #3dd0b5;
+}
+
+h2.setupTitle{
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-family: 'Nunito Sans', 'Josefin Sans', sans-serif;
+}
+
+.wrapper{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.loginFormContainer{
+    display: block;
+    position: relative;
+    width: 350px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.2);
+    background-color: #fff;
+}
+
+.intakeLogo{
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.intakeLogo a{
+    display: inline-block;
+}
+
+.intakeLogo a img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 60px;
+}
+
+input.inputText{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+input.typePassword{
+    padding: 10px 35px 10px 10px;
+}
+
+p.formSubmit{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button{
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #000;
+    padding: 8px 30px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all .2s;
+}
+
+.button:hover{
+    background-color: #1fad93;
+    color: #fff;
+}
+
+.loginError{
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    background-color: #d20000;
+    padding: 10px;
+}
+
+p.formControl{
+    display: block;
+    position: relative;
+}
+
+p.formControl a{
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    right: 8px;
+    font-size: 20px;
+    color: #ccc;
+}
+
+p.formControl a:hover{
+    color: #999;
+}
+
+p.formControl a.showed{
+    color: #000;
+}
+
+.aboutApp{
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+}
+
+.signupSiccess{
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #3dd056;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.signupError{
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #b30000;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.actionLinks{
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.actionLinks ul{
+    list-style-type: none;
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 0;
+}
+
+.actionLinks ul li{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.actionLinks ul li span{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.appLogo{
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.appLogo img{
+    width: auto;
+    height: auto;
+    max-height: 80px;
+}
+
+h2.setupTitle{
+    text-align: center;
+}
+
+.installationButton{
+    display: block;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.card .welcome{
+    font-size: 18px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.center{
+    text-align: center;
+}
+
+.licenseText{
+    display: block;
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 20px 10px;
+}
+
+.installationButton a{
+    display: inline-block;
+    border: 1px solid #000;
+    margin: 0 5px;
+}
+
+.installationButton a:hover{
+    border: 1px solid #3dd0b5;
+}
+
+a.iamagree{
+    display: inline-block;
+    color: #000;
+    font-weight: 700;
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding: 8px 30px;
+    font-size: 15px;
+    transition: all .2s;
+}
+
+a.iamagree:hover{
+    color: #3dd0b5;
+}
+
+a.iamagree.active{
+    color: #000;
+    background-color: #3dd0b5;
+    border: 1px solid #3dd0b5;
+}
+
+.installationButton a.nextstep{
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.installationButton a.nextstep.active{
+    opacity: 1;
+    visibility: visible;
+    display: inline-block;
+}
+
+td.table-col-1{
+    width: 10%;
+}
+
+td.table-col-2{
+    width: 20%;
+}
+
+td.table-col-3{
+    width: 30%;
+}
+
+td.table-col-4{
+    width: 40%;
+}
+
+td.table-col-5{
+    width: 50%;
+}
+
+td.table-col-6{
+    width: 60%;
+}
+
+td.table-col-7{
+    width: 70%;
+}
+
+td.table-col-8{
+    width: 80%;
+}
+
+td.table-col-9{
+    width: 90%;
+}
+
+td.table-col-10{
+    width: 100%;
+}
+
+tr.tableRow{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+table.table tbody tr.tableRow td{
+    border-top: none;
+}
+
+tr.tableRow td.table-label{
+    text-align: right;
+}
+
+input.installInput{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 6px;
+}
+
+.installationProgress{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    min-height: 50px;
+}
+
+.ipLoading,
+.ipLoadingMsg{
+    width: 100%;
+    text-align: center;
+}
+
+.ipLoading img{
+    width: 50px;
+    height: 50px;
+}
+
+.ipLoadingMsg{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+p.welcome.error{
+    background-color: #8e0000;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 40px 40px 0px;
+    font-size: 14px;
+}
+
+p.welcome.success{
+    background-color: #008e7a;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 40px 40px 0px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.admincredentials{
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+}
+
+strong.allert{
+    display: block;
+    margin-top: 10px;
+    color: #8e0000;
+}

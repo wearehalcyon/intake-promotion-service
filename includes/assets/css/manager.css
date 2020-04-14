@@ -1,0 +1,1105 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+}
+
+body{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    background-color: #eceff3;
+}
+
+a{
+    text-decoration: none;
+    color: #3dd0b5;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #1a927c;
+}
+
+a:active,
+a:focus{
+    text-decoration: none;
+    color: #3dd0b5;
+}
+
+h1, h2, h3, h4, h5, h6{
+    display: block;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.container-fluid{
+    width: 100%;
+    padding: 0 15px;
+}
+
+.sidebarNav{
+    display: block;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background-color: #101419;
+    color: #c7cdd4;
+    overflow-y: auto;
+    z-index: 99;
+}
+
+.dashboard .wrapper .content{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    overflow-x: hidden;
+}
+
+.contentTop{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+    padding: 15px 0;
+}
+
+h1.pageTitle{
+    display: inline-block;
+    position: relative;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #101419;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.engineLogo{
+    display: block;
+    position: relative;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.engineLogo img{
+    max-width: 100%;
+    max-height: 36px;
+}
+
+.navList{
+    display: block;
+    position: relative;
+    margin: 0 0 40px;
+}
+
+.navList h4{
+    display: block;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0 15px 10px;
+}
+
+ul.navMenu{
+    display: block;
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+ul.navMenu li{
+    display: block;
+    position: relative;
+    border-bottom: 1px solid #1f252d;
+}
+
+ul.navMenu li:first-child{
+    border-top: 1px solid #1f252d;
+}
+
+ul.navMenu li a{
+    display: block;
+    position: relative;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #8b939c;
+    transition: all .1s;
+}
+
+ul.navMenu li a:hover,
+ul.navMenu li.active a{
+    color: #25d0b0;
+    background-color: #20262d;
+}
+
+ul.navMenu li a i{
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.card{
+    display: block;
+    position: relative;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h4{
+    display: block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 700;
+    color: #56616f;
+    border-bottom: 1px solid #dedede;
+}
+
+.card p.subTitle{
+    display: block;
+    margin-top: 5px;
+}
+
+.table > tbody > tr > td.admin{
+    color: #b30000;
+}
+
+.table > tbody > tr.currentUserLoggedIn{
+    background-color: #e0fff9;
+}
+
+.labelLogo{
+    display: block;
+    position: relative;
+}
+
+.labelLogo img{
+    max-width: 100%;
+    max-height: 30px;
+}
+
+a.settingsIconLink{
+    display: inline-block;
+    font-size: 18px;
+}
+
+.userMeta{
+    display: block;
+    position: relative;
+    text-align: right;
+}
+
+.contentTop .row{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.userMeta{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+a.userIcon{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #999;
+    transition: all .1s;
+}
+
+a.userIcon:hover,
+a.userIcon.active{
+    color: #3dd0b5;
+}
+
+a.userIcon i{
+    font-size: 38px;
+    margin-left: 10px;
+}
+
+.userMetaSubNav{
+    display: block;
+    position: absolute;
+    width: auto;
+    max-width: 200px;
+    min-width: 120px;
+    height: auto;
+    border-radius: 6px;
+    padding: 5px 10px;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    top: calc(100% + 20px);
+    right: 0;
+    visibility: hidden;
+    transition: all .3s;
+    transform: translateY(-100%);
+    opacity: 0;
+    z-index: 10;
+}
+
+.userMetaSubNav.active{
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.userMetaSubNav ul{
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.userMetaSubNav ul li{
+    border-bottom: 1px solid #efefef;
+}
+
+.userMetaSubNav ul li:last-child{
+    border-bottom: none;
+}
+
+.userMetaSubNav ul li a{
+    display: block;
+    position: relative;
+    padding: 10px 5px;
+    font-size: 15px;
+    color: #999;
+}
+
+.userMetaSubNav ul li a:hover{
+    color: #3dd0b5;
+}
+
+input.input{
+    width: 100%;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.button{
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #000;
+    padding: 8px 30px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all .2s;
+}
+
+.button:hover{
+    background-color: #1fad93;
+}
+
+span.apiLabel{
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: calc(100% + 10px);
+    font-size: 11px;
+    font-weight: 800;
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 6px 10px 4px 10px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+span.apiLabel.registered{
+    background-color: #23b173;
+}
+
+span.apiLabel.unregistered{
+    background-color: #b30000;
+}
+
+.aboutPlan{
+    display: block;
+    position: relative;
+    padding: 0  0 10px 0;
+}
+
+.aboutPlan p{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.aboutPlan p strong{
+    font-weight: 800;
+}
+
+.aboutPlan p span{
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.queryTable p{
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.queryTable p span{
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.dashboardBreadcrumbs{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 30px 0 0 0;
+}
+
+.dashboardBreadcrumbs ul{
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    list-style-type: none;
+}
+
+.dashboardBreadcrumbs ul li{
+    display: inline-block;
+    font-size: 14px;
+}
+
+.dashboardBreadcrumbs ul li a{
+    margin-right: 3px;
+}
+
+.dashboardBreadcrumbs ul li span{
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.generalSettingsTable tbody tr{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.generalSettingsTable tbody tr td{
+    border-top: none;
+    width: 50%;
+}
+
+.generalSettingsTable tbody tr td input{
+    margin-top: 0;
+}
+
+ul.appAdminList{
+    list-style-type: none;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+}
+
+ul.appAdminList li{
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+ul.appAdminList li::after{
+    content: ',';
+}
+
+ul.appAdminList li:last-child::after{
+    display: none;
+}
+
+span.appAdmin{
+    display: inline-block;
+}
+
+ul.appAdminList li a{
+    color: #b30000;
+    font-weight: 700;
+}
+
+ul.appAdminList li a:hover{
+    color: #000;
+}
+
+.debugPan{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(#e4e4e4, #cacaca);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    padding: 0px 20px;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 800;
+    text-shadow: 1px 1px 1px #fff;
+    transform: translateY(100%);
+    transition: all .3s;
+    z-index: 9999;
+}
+
+.debugPan.active{
+    transform: translateY(0%);
+}
+
+button.openDebug{
+    display: inline-block;
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: -40px;
+    right: 15px;
+    border: none;
+    padding: 6px 7px;
+    color: #fff;
+    background-color: #222;
+    border-radius: 4px;
+}
+
+button.openDebug.active{
+    background-color: #b30000;
+}
+
+.memoryUsage{
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+.debugBlock{
+    position: relative;
+    border-left: 1px solid #c1c1c1;
+    border-bottom: 1px solid #c1c1c1;
+    padding: 10px 20px;
+}
+
+.debugBlock span.title{
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #138e61;
+}
+
+.dbSub{
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    background-color: #e4e4e4;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+    bottom: calc(100% + 1px);
+    left: calc(50% - 100px);
+    text-align: left;
+}
+
+.dbSub::after{
+    display: block;
+    position: relative;
+    content: '';
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: -14px;
+}
+
+.debugBlock:hover .dbSub{
+    display: block;
+    cursor: text;
+}
+
+.debugBlock[data-has-sub="true"]{
+    cursor: pointer;
+}
+
+.debugBlock:hover{
+    box-shadow: inset 0px 0px 8px rgba(0,0,0,.15);
+}
+
+.dbSub ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dbSub ul li{
+    border-bottom: 1px solid #c1c1c1;
+    padding: 5px 10px;
+}
+
+.dbSub ul li:last-child{
+    border-bottom: 0;
+}
+
+.nice-select{
+    width: 150px;
+}
+
+.nice-select .list{
+    width: 100%;
+}
+
+span.settingDesc{
+    display: block;
+    position: relative;
+    font-size: 11px;
+}
+
+span.unregistered_ru{
+    min-width: 170px;
+    text-align: center;
+}
+
+.cardContent{
+    display: block;
+    position: relative;
+    margin-top: 10px;
+}
+
+.userPhoto{
+    display: block;
+    position: relative;
+    padding: 15px 0px;
+    text-align: center;
+}
+
+.userPhoto img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 10px solid rgba(0,0,0,0.1);
+}
+
+.changePhotoButton{
+    display: block;
+    position: relative;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.changePhotoButton button.button{
+    border-radius: 100px;
+    padding: 5px 20px;
+    font-size: 14px;
+}
+
+button.changeLabelLogo.active,
+.changePhotoButton button.button.active{
+    background-color: #1fad93;
+}
+
+.photoChanger{
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 120px;
+    background-color: #ccc;
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+.photoChanger.active{
+    height: auto;
+}
+
+.upload_photo{
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 120px;
+    border-radius: 10px;
+    transition: all .3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+form.dropzone,
+.upload_photo{
+    border-radius: 10px;
+    border: 4px dashed #ccc;
+    transition: all .4s;
+}
+
+form.dropzone:hover,
+.upload_photo:hover{
+    background-color: #f1f1f1;
+}
+
+.dz-image-preview{
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+img.smallAvatar{
+    width: 38px;
+    height: 38px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-left: 10px;
+}
+
+.PhotoUploaderPopup{
+    display: block;
+    position: fixed;
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    background-color: #fff;
+    top: 30px;
+    left: calc(50% - 200px);
+    padding: 15px;
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.2);
+    transition: all .4s;
+    transform: translateY(calc(-100% - 60px));
+    z-index: 99;
+}
+
+.PhotoUploaderPopup.active{
+    transform: translateY(0);
+}
+
+ul.mlList{
+    list-style-type: none;
+    font-size: 0;
+    margin: 0;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.mlList li{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+}
+
+ul.mlList li a{
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 72px;
+    color: #444;
+    transition: all .2s;
+    line-height: 15px;
+    padding: 14px 0px;
+    border-radius: 10px;
+}
+
+ul.mlList li a i{
+    transition: all .3s;
+}
+
+ul.mlList li a i.file-ext{
+    font-size: 52px;
+    margin-top: 10px;
+    margin-bottom: 10px    ;
+}
+
+ul.mlList li a:hover{
+    background-color: #f1f1f1;
+}
+
+ul.mlList li a:hover i{
+    opacity: .7;
+}
+
+ul.mlList li a span{
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+span.labelLogoUrl{
+    word-break: break-word;
+    font-size: 12px;
+}
+
+table.users-artists-table .no-user-photo{
+    font-size: 40px;
+}
+
+table tbody tr td{
+    vertical-align: center;
+}
+
+table tbody tr td img.uit-photo{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+table tbody tr td img.uit-cover{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.col-card{
+    padding-bottom: 30px;
+}
+
+.changingAccDetails{
+    display: block;
+    position: relative;
+    transition: all .3s;
+    opacity: 1;
+    height: auto;
+    overflow: hidden;
+}
+
+.changingAccDetails.active{
+    height: auto;
+    opacity: 1;
+}
+
+table.account-details-table tr td{
+    border-top: none;
+    word-break: break-word;
+}
+
+table.account-details-table tr td.adt-key{
+    width: 30%;
+}
+
+p.formControl{
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+p.formControl::after{
+    display: block;
+    position: relative;
+    content: '';
+    width: 100%;
+    height: auto;
+    clear: both;
+}
+
+p.formControl label{
+    display: block;
+}
+
+p.formControl label strong{
+    display: block;
+    margin-bottom: 5px;
+}
+
+p.formControl strong.forSelect{
+    display: block;
+    margin-bottom: 5px;
+}
+
+p.formControl input[type="text"],
+p.formControl input[type="email"],
+p.formControl input[type="password"]{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+p.formControl textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.formSubmit{
+    display: block;
+    margin-top: 30px;
+}
+
+.formSubmit.error p{
+    display: block;
+    color: #fff;
+    background-color: #b30000;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.formSubmit.success p{
+    display: block;
+    color: #fff;
+    background-color: #00b39a;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.dashboardFooter{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    background-color: #fff;
+    margin-top: 30px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.1);
+}
+
+.editCampaign a{
+    display: inline-block;
+    font-weight: 700;
+}
+
+.campaignStatus i{
+    font-size: 20px;
+}
+
+.campaignStatus i.fa-check-circle{
+    color: #3dd0bb;
+}
+
+.campaignStatus i.fa-times-circle{
+    color: #d30000;
+}
+
+a.viewCampaignLink{
+    color: #000;
+    font-size: 20px;
+}
+
+a.viewCampaignLink:hover{
+    color: #3dd0bb;
+}
+
+.cardActionLink{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+}
+
+.cardActionLink a:hover{
+    color: #fff;
+}
+
+.cal-bottom{
+    padding: 0 0 20px 0;
+}
+
+.campaignSetName{
+    display: block;
+    padding: 40px 0 20px 0;
+}
+
+.campaignSetName input{
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 6px;
+}
+.campaignNewContent{
+    display: block;
+    padding: 15px 0px 0px 0px;
+}
+
+.coverPreview{
+    display: block;
+}
+
+.coverPreview img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.newCampaignCard{
+    margin-bottom: 30px;
+}
+
+span.tox-statusbar__branding{
+    display: none;
+}
+
+.tox .tox-menubar{
+    display: none !important;
+}
+
+.tox.tox-tinymce{
+    border-radius: 6px;
+}
+
+p.formControl .nice-select{
+    width: 100%;
+}
+
+.campaignCreated{
+    display: block;
+    position: relative;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #3dd0b5;
+}
+
+.campaignCreated a{
+    font-weight: 700;
+    color: #fff;
+}
+
+.campaignCreated a:hover{
+    text-decoration: underline;
+}
+
+.deleteCampaignQuckly button{
+    border: none;
+    padding: 0;
+    font-size: 20px;
+    color: #b30000;
+}
+
+.deleteCampaignQuckly button:hover{
+    opacity: .5;
+}
+
+.atfRow{
+    position: relative;
+    border-bottom: 1px solid #dedede;
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+.atfRow p.formControl{
+    margin-bottom: 10px;
+}
+
+.atfButton{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: right;
+    padding: 15px 0px 0px 0px;
+}
+
+.multitrackTracklist{
+    list-style: none;
+    display: block;
+    position: relative;
+    counter-reset: tracklistCounter;
+}
+
+.multitrackTracklist li:before {
+    position: absolute;
+    counter-increment: tracklistCounter;
+    content:counter(tracklistCounter);
+    top: 14px;
+    left: 2px;
+    color: #999;
+    font-size: 14px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 100%;
+    line-height: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
