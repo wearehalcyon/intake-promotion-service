@@ -99,6 +99,21 @@
     // Tracklist Repeater
     var rowNum = 1;
     var trackIndex = $('addNewTrackRow input').length + 1;
+    var dzID = $('.addNewTrackRow input').length + 1;
+
+    $('#upload_track_1').dropzone({
+        url: '/includes/uploader-track.php',
+        maxFiles: 1,
+        acceptedFiles: '.mp3',
+        thumbnail: function(file, dataUrl) {
+            $('.dz-image img').attr('src', '/includes/assets/images/mp3.png');
+        },
+        success: function(file){
+            $('input[data-input-id="1"].tracksource').attr('value', file.name);
+            $('.dz-image img').attr('src', '/includes/assets/images/mp3.png');
+        },
+    });
+
     $('.addNewTrackRow').click(function(){
         var cloneID = parseInt($('.atfRow[data-clone-id]').attr('data-clone-id')) + rowNum++;
         var namePrefix = 'track[' + (++trackIndex)  + ']';
@@ -108,11 +123,32 @@
             .attr('name', 'trackname-' + cloneID)
             .attr('data-clone-id', cloneID)
             .appendTo('.multitrackTracklist')
-            .find('input').attr('data-input-id', cloneID);
+            .find('input, .upload_track').attr('data-input-id', cloneID);
         $('input[data-input-id="' + cloneID + '"].trackname').attr('name', (namePrefix) + '[artist]');
         $('input[data-input-id="' + cloneID + '"].tracktitle').attr('name', (namePrefix) + '[title]');
         $('input[data-input-id="' + cloneID + '"].trackdescription').attr('name', (namePrefix) + '[description]');
         $('input[data-input-id="' + cloneID + '"].tracksource').attr('name', (namePrefix) + '[source]');
+        //$('input[data-input-id="' + cloneID + '"].trackupload').attr('name', (namePrefix) + '[upload]');
+        //$('input[data-input-id="' + cloneID + '"].getuploader').attr('data-uploader-id', cloneID);
+
+        $('input[data-input-id="' + cloneID + '"].tracksource').attr('value', '');
+        $('.upload_track[data-input-id="' + cloneID + '"] .dz-message').css('display', 'block');
+        $('.upload_track[data-input-id="' + cloneID + '"] .dz-preview').css('display', 'none');
+
+        $('.upload_track[data-input-id="' + cloneID + '"]').attr('id', 'upload_track_' + cloneID).dropzone({
+            url: '/includes/uploader-track.php',
+            maxFiles: 1,
+            acceptedFiles: '.mp3',
+            thumbnail: function(file, dataUrl) {
+                $('.dz-image img').attr('src', '/includes/assets/images/mp3.png');
+            },
+            success: function(file){
+                $('input[data-input-id="' + cloneID + '"].tracksource').attr('value', file.name);
+                $('.dz-image img').attr('src', '/includes/assets/images/mp3.png');
+                $('.upload_track[data-input-id="' + cloneID + '"] .dz-message').css('display', 'none');
+            },
+        });
     });
+
 
 })(jQuery);

@@ -1029,7 +1029,6 @@ p.formControl .nice-select{
     position: relative;
     border-bottom: 1px solid #dedede;
     padding-top: 10px;
-    padding-left: 30px;
 }
 
 .atfRow p.formControl{
@@ -1066,6 +1065,90 @@ p.formControl .nice-select{
     text-align: center;
     border-radius: 100%;
     line-height: 32px;
+}
+
+.filepond--drip{
+    background-color: #000;
+}
+
+.filepond--root.trackupload.filepond--hopper{
+    height: 42px !important;
+}
+
+.filepond--root .filepond--drop-label{
+    min-height: 42px;
+}
+
+.filepond--item,
+.filepond--root .filepond--list-scroller{
+    margin: 0px;
+}
+
+.filepond--list{
+    width: 100%;
+    height: 100%;
+    left: auto;
+    right: auto;
+}
+
+.multitrackTracklist li:before{
+    display: none;
+}
+
+.graphicUploader{
+    display: block;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.dz-image img{
+    width: 100%;
+    height: auto;
+}
+
+.upload_track.upload_photo{
+    text-align: left;
+}
+
+.upload_track.upload_photo .dz-preview .dz-image{
+    width: 90px;
+    height: 90px;
+}
+
+.upload_track.upload_photo .dz-preview .dz-details{
+    min-width: auto;
+    max-width: 200px;
+    text-align: left;
+    left: 100%;
+}
+
+.upload_track.upload_photo .dz-preview .dz-details .dz-filename:not(:hover){
+    min-width: 400px;
+}
+
+.upload_track.upload_photo .dz-preview .dz-details .dz-size{
+    margin-bottom: 5px;
+}
+
+.upload_track.upload_photo .dz-preview:hover .dz-image img{
+    filter: blur(0);
+    transform: scale(1);
+}
+
+.upload_track.upload_photo .dz-preview .dz-details .dz-filename:hover span{
+    border: none;
+}
+
+.upload_track.upload_photo .dz-preview .dz-details .dz-filename span{
+    padding: 0;
+}
+
+.upload_track.upload_photo .dz-preview{
+    margin: 0px;
+}
+
+.upload_track.upload_photo .dz-preview dz-file-preview dz-error{
+    display: none !important;
 }
 
 

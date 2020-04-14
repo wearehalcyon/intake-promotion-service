@@ -156,32 +156,38 @@ if (isset($data['createCanpaign'])) {
                     <h4><?php echo get_translate('Media', 'Медиа'); ?></h4>
                     <div class="campaignNewContent">
                         <div class="container-fluid addTrackfile">
-                            <div class="row atfRowTitles">
-                                <div class="col-md-4">
-                                    <strong><?php echo get_translate('Artist', 'Артист'); ?></strong>
-                                </div>
-                            </div>
                             <ol class="multitrackTracklist">
                                 <li class="row atfRow" data-item-id="track-origin" data-clone-id="1">
                                     <div class="col-md-4">
                                         <p class="formControl">
-                                            <input data-type="atrist" class="trackname" type="text" name="track[1][artist]" placeholder="<?php echo get_translate('John Doe', 'John Doe'); ?>">
+                                            <input data-input-id="1" data-type="atrist" class="trackname" type="text" name="track[1][artist]" placeholder="<?php echo get_translate('John Doe', 'John Doe'); ?>">
                                         </p>
                                     </div>
                                     <div class="col-md-4">
                                         <p class="formControl">
-                                            <input data-type="title" class="tracktitle" type="text" name="track[1][title]" placeholder="<?php echo get_translate('My World', 'My World'); ?>">
+                                            <input data-input-id="1" data-type="title" class="tracktitle" type="text" name="track[1][title]" placeholder="<?php echo get_translate('My World', 'My World'); ?>">
                                         </p>
                                     </div>
                                     <div class="col-md-4">
                                         <p class="formControl">
-                                            <input data-type="description" class="trackdescription" type="text" name="track[1][description]" placeholder="<?php echo get_translate('Original Mix', 'Original Mix'); ?>">
+                                            <input data-input-id="1" data-type="description" class="trackdescription" type="text" name="track[1][description]" placeholder="<?php echo get_translate('Original Mix', 'Original Mix'); ?>">
                                         </p>
                                     </div>
                                     <div class="col-md-12">
                                         <p class="formControl">
-                                            <input data-type="source" class="tracksource" type="text" name="track[1][source]" placeholder="<?php echo get_translate('https://filecloud.com/track-source.mp3', 'https://filecloud.com/track-source.mp3'); ?>">
+                                            <input data-input-id="1" data-type="source" class="tracksource" type="text" name="track[1][source]" value="">
                                         </p>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div id="gu-1" class="graphicUploader">
+                                            <div id="dropzone_1" class="photoChanger">
+                                                <div id="upload_track_1" class="upload_track upload_photo">
+                                                    <div class="dz-message">
+                                                        <?php echo get_translate('Upload Track Here<br>(Only MP3)', 'Загружайте трек сюда<br>(Только MP3)'); ?>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </li>
                             </ol>
