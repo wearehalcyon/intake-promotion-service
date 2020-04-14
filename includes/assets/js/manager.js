@@ -98,30 +98,21 @@
 
     // Tracklist Repeater
     var rowNum = 1;
+    var trackIndex = $('addNewTrackRow input').length + 1;
     $('.addNewTrackRow').click(function(){
         var cloneID = parseInt($('.atfRow[data-clone-id]').attr('data-clone-id')) + rowNum++;
+        var namePrefix = 'track[' + (++trackIndex)  + ']';
         $('.atfRow[data-item-id="track-origin"]')
             .clone()
             .attr('data-item-id', 'track-cloned')
             .attr('name', 'trackname-' + cloneID)
             .attr('data-clone-id', cloneID)
-            .appendTo('.multitrackTracklist');
-            // .find('input[data-type="atrist"]').attr('name', 'track[' + cloneID + '][atrist]')
-            //
-            // .find('input[data-type="title"]').attr('name', 'track[' + cloneID + '][title]')
-            //
-            // .find('input[data-type="description"]').attr('name', 'track[' + cloneID + '][description]')
-            //
-            // .find('input[data-type="source"]').attr('name', 'track[' + cloneID + '][source]');
-
-
-
-
-
-        // $('.atfRow[data-clone-id="' + cloneID + '"] input[name="trackname-1"]').attr('name', 'trackname-' + cloneID);
-        // $('.atfRow[data-clone-id="' + cloneID + '"] input[name="tracktitle-1"]').attr('name', 'tracktitle-' + cloneID);
-        // $('.atfRow[data-clone-id="' + cloneID + '"] input[name="trackdesc-1"]').attr('name', 'trackdesc-' + cloneID);
-        // $('.atfRow[data-clone-id="' + cloneID + '"] input[name="tracksrc-1"]').attr('name', 'tracksrc-' + cloneID);
+            .appendTo('.multitrackTracklist')
+            .find('input').attr('data-input-id', cloneID);
+        $('input[data-input-id="' + cloneID + '"].trackname').attr('name', (namePrefix) + '[artist]');
+        $('input[data-input-id="' + cloneID + '"].tracktitle').attr('name', (namePrefix) + '[title]');
+        $('input[data-input-id="' + cloneID + '"].trackdescription').attr('name', (namePrefix) + '[description]');
+        $('input[data-input-id="' + cloneID + '"].tracksource').attr('name', (namePrefix) + '[source]');
     });
 
 })(jQuery);

@@ -165,22 +165,22 @@ if (isset($data['createCanpaign'])) {
                                 <li class="row atfRow" data-item-id="track-origin" data-clone-id="1">
                                     <div class="col-md-4">
                                         <p class="formControl">
-                                            <input data-type="atrist" type="text" name="track[1][atrist]" placeholder="<?php echo get_translate('John Doe', 'John Doe'); ?>">
+                                            <input data-type="atrist" class="trackname" type="text" name="track[1][artist]" placeholder="<?php echo get_translate('John Doe', 'John Doe'); ?>">
                                         </p>
                                     </div>
                                     <div class="col-md-4">
                                         <p class="formControl">
-                                            <input data-type="title" type="text" name="track[1][title]" placeholder="<?php echo get_translate('My World', 'My World'); ?>">
+                                            <input data-type="title" class="tracktitle" type="text" name="track[1][title]" placeholder="<?php echo get_translate('My World', 'My World'); ?>">
                                         </p>
                                     </div>
                                     <div class="col-md-4">
                                         <p class="formControl">
-                                            <input data-type="description" type="text" name="track[1][description]" placeholder="<?php echo get_translate('Original Mix', 'Original Mix'); ?>">
+                                            <input data-type="description" class="trackdescription" type="text" name="track[1][description]" placeholder="<?php echo get_translate('Original Mix', 'Original Mix'); ?>">
                                         </p>
                                     </div>
                                     <div class="col-md-12">
                                         <p class="formControl">
-                                            <input data-type="source" type="text" name="track[1][source]" placeholder="<?php echo get_translate('https://filecloud.com/track-source.mp3', 'https://filecloud.com/track-source.mp3'); ?>">
+                                            <input data-type="source" class="tracksource" type="text" name="track[1][source]" placeholder="<?php echo get_translate('https://filecloud.com/track-source.mp3', 'https://filecloud.com/track-source.mp3'); ?>">
                                         </p>
                                     </div>
                                 </li>
