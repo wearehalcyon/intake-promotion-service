@@ -57,7 +57,8 @@
             $('input[name="cover"]').attr('value', file.name);
         },
         resizeWidth: 500,
-        resizeHeight: 500
+        resizeHeight: 500,
+        resizeMethod: 'crop'
     });
 
     // Fancybox 3
@@ -110,7 +111,7 @@
         },
         success: function(file){
             $('input[data-input-id="1"].tracksource').attr('value', file.name);
-            $('.dz-image img').attr('src', '/includes/assets/images/mp3.png');
+            $('#upload_track_1 .dz-image img').attr('src', '/includes/assets/images/mp3.png');
         },
     });
 
@@ -131,6 +132,9 @@
         //$('input[data-input-id="' + cloneID + '"].trackupload').attr('name', (namePrefix) + '[upload]');
         //$('input[data-input-id="' + cloneID + '"].getuploader').attr('data-uploader-id', cloneID);
 
+        $('input[data-input-id="' + cloneID + '"].trackname').attr('value', '');
+        $('input[data-input-id="' + cloneID + '"].tracktitle').attr('value', '');
+        $('input[data-input-id="' + cloneID + '"].trackdescription').attr('value', '');
         $('input[data-input-id="' + cloneID + '"].tracksource').attr('value', '');
         $('.upload_track[data-input-id="' + cloneID + '"] .dz-message').css('display', 'block');
         $('.upload_track[data-input-id="' + cloneID + '"] .dz-preview').css('display', 'none');
@@ -146,9 +150,42 @@
                 $('input[data-input-id="' + cloneID + '"].tracksource').attr('value', file.name);
                 $('.dz-image img').attr('src', '/includes/assets/images/mp3.png');
                 $('.upload_track[data-input-id="' + cloneID + '"] .dz-message').css('display', 'none');
+                $(this).remove();
             },
         });
     });
 
+    // Create New Tracklist
+    $('.editableCreateNewTracklist button').click(function(){
+        $(this).fadeOut();
+        $('.ditableTracklist, .editableAddTrackButton').fadeIn();
+    });
+    $('button.hideTracklistCreator').click(function(){
+        $('.ditableTracklist, .editableAddTrackButton').fadeOut();
+        $('.editableCreateNewTracklist button').fadeIn();
+    });
+
+    // Play Preview
+    $(document).ready(function(){
+        var wavesurfer = WaveSurfer.create({
+            container: '#wavesurfer',
+            waveColor: '#000',
+            progressColor: '#3dd0b5',
+            backgroundColor: '#fff',
+            backend: 'WebAudio',
+            barHeight: 1.5,
+            barWidth: 1,
+            height: 50,
+            barGap: 1
+        });
+        $('button.playTrack').click(function(){
+            $('#wavesurfer').addClass('active');
+            var prevSrc = $(this).attr('data-preview-src');
+            wavesurfer.on('ready', function () {
+                wavesurfer.play();
+            });
+            wavesurfer.load(prevSrc);
+        });
+    });
 
 })(jQuery);

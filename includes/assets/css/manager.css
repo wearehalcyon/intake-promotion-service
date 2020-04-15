@@ -772,6 +772,7 @@ ul.mlList li a span{
     text-align: center;
     font-size: 14px;
     font-weight: 600;
+    word-break: break-word;
 }
 
 span.labelLogoUrl{
@@ -1149,6 +1150,76 @@ p.formControl .nice-select{
 
 .upload_track.upload_photo .dz-preview dz-file-preview dz-error{
     display: none !important;
+}
+
+ol.currentTracklist{
+    display: block;
+    list-style: none;
+    border-top: 1px solid #dedede;
+}
+
+ol.currentTracklist strong{
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+}
+
+ol.multitrackTracklist strong.mtl{
+    font-size: 18px;
+    display: block;
+    margin-top: 30px;
+}
+
+ol.currentTracklist li{
+    padding: 5px 10px 5px 10px;
+    border-top: 1px solid #dedede;
+}
+
+ol.currentTracklist,
+ol.currentTracklist li:last-child{
+    border-bottom: 1px solid #dedede;
+    border-left: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+}
+
+#wavesurfer{
+    border-top: 1px solid #dedede;
+}
+
+.ditableTracklist,
+.editableAddTrackButton{
+    display: none;
+}
+
+li.trackListItem{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button.playTrack{
+    font-size: 16px;
+    padding: 0px;
+    border: none;
+}
+
+button.playTrack:hover,
+button.playTrack.played{
+    opacity: .5;
+}
+
+#wavesurfer{
+    display: none;
+}
+
+#wavesurfer.active{
+    display: block;
+}
+
+#wavesurfer wave wave{
+    border-right: none !important;
+    z-index: 1 !important;
 }
 
 

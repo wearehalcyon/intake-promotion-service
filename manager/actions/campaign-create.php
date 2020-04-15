@@ -30,29 +30,8 @@ if (isset($data['createCanpaign'])) {
         $create->promo_mail_theme = $data['mail_theme'];
         $create->promo_public_theme = $data['public_theme'];
 
-
-//        $tracknameArr = [];
-//
-//        for($q=1; $q < 9; $q++) {
-//            $tracknameArr[] = ['trackname-' . $q => $data['trackname-' . $q]];
-//            if ( !isset( $data['trackname-' . $q] ) ) {
-//                break;
-//            }
-//        }
-//
-//        $tracknameSrc = str_replace(['{', '}'], '', json_encode($tracknameArr));
-//
-//        $create->promo_artist_name = str_replace(['[', ']'], ['{', '}'], $tracknameSrc);
-
-        $tracknameSrc = str_replace(['{', '}'], '', json_encode($_POST['track']));
-        $create->promo_artist_name = str_replace(['[', ']'], ['{', '}'], $tracknameSrc);
-
-
-
-
-
-
-
+        $tracknameSrc = json_encode($_POST['track']);
+        $create->promo_track_preview = str_replace(['[', ']'], ['{', '}'], $tracknameSrc);
     R::store($create);
     echo '<meta http-equiv="refresh" content="0; URL=/manager/create.php?type=campaign&result=success">';
 }

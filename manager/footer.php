@@ -11,6 +11,7 @@
         <script src="<?php echo base_url('lib/tinymce/tinymce.min.js'); ?>"></script>
         <script src="<?php echo base_url('lib/flat-datepicker/datepicker.js'); ?>"></script>
         <?php debug_bar(); ?>
+        <script src="<?php echo get_assets('wavesurfer', 'script'); ?>"></script>
         <script src="<?php echo get_assets('manager', 'script'); ?>"></script>
     </body>
 </html>
