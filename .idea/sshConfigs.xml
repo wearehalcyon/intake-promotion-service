@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="trialschool.sftp.wpengine.com" id="29a85138-cf57-4ab2-9eb4-c93041825816" port="2222" nameFormat="DESCRIPTIVE" username="trialschool-roman" />
+    </configs>
+  </component>
+</project>

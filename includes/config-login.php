@@ -7,7 +7,7 @@
         $artist = R::findOne( 'artists', 'artist_username = ?', array( $data['username'] ) );
         $lastLogin = date('M-d-Y / H:i:s');
         $userID = $artist->id;
-        $userIP = get_client_ip_env();
+        $userIP = $_SERVER['REMOTE_ADDR'];
         $artist->artist_last_login = $lastLogin;
         $artist->artist_ip = $userIP;
         //R::exec( "update artists set artist_ip=? where id=?", [$userIP, $userID] );

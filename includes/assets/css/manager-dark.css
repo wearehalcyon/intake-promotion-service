@@ -1231,6 +1231,7 @@ button.playTrack.played{
 #wavesurfer wave wave{
     border-right: none !important;
     z-index: 1 !important;
+    border-right: 1px solid rgb(139, 147, 156) !important;
 }
 
 .editableCreateNewTracklist button{

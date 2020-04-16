@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5f908a0e-3a1b-4d21-b2df-8644622145fc" name="ArtRoman" url="http://witnes02.ftp.tools">
+        <fileTransfer rootFolder="/artroman.net/" host="witnes02.ftp.tools" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="6230738f-d8c8-46ba-afbb-0de57d7bc4eb" name="Trial School PROD" url="trialschool.sftp.wpengine.com">
+        <fileTransfer rootFolder="/wp-content/themes/trialschool-redesign/" accessType="SFTP" host="trialschool.sftp.wpengine.com" port="2222" sshConfigId="29a85138-cf57-4ab2-9eb4-c93041825816" sshConfig="trialschool-roman@trialschool.sftp.wpengine.com:2222 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

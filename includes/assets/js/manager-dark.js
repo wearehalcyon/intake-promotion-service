@@ -172,9 +172,9 @@
     $(document).ready(function(){
         var wavesurfer = WaveSurfer.create({
             container: '#wavesurfer',
-            waveColor: '#000',
+            waveColor: '#373f48',
             progressColor: '#3dd0b5',
-            backgroundColor: '#fff',
+            backgroundColor: 'transparent',
             backend: 'WebAudio',
             barHeight: 1.5,
             barWidth: 1,
