@@ -1,12 +1,55 @@
 <?php
     $artistsCount = R::count('artists');
 
-    $artists = R::getAll('SELECT * FROM `artists`');
-?>
+    $artists = R::getAll('SELECT * FROM `artists` ORDER BY `artist_alias` ASC');
+
+	$siteNameExport = mb_strtolower(str_replace(' ', '-', get_option('site_name')));
+	$artstsCSV = dirname(__FILE__) . '/../../view/uploads/export/' . $siteNameExport . '-artists.csv';
+    if ( isset( $_POST['exportArtists'] ) && isset( $_POST['source-artists-csv'] ) ) {
+	    $output = fopen($artstsCSV, 'w');
+	    $artists = R::getAll('SELECT artist_alias, artist_email FROM artists');
+	    foreach ($artists as $artist) {
+		    fputcsv($output, [$artist['artist_alias'], $artist['artist_email']]);
+	    }
+        header("Location: /manager/index.php?page=artists");
+	    exit;
+    } elseif ( isset( $_POST['deleteExportArtists'] ) ) {
+        unlink($artstsCSV);
+	    header("Location: /manager/index.php?page=artists");
+	    exit;
+    }
+ ?>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="pageTitle"><?php echo get_translate('Artists', 'Артисты'); ?></h1>
+            <h1 class="pageTitle">
+                <div class="pageTitleLayer">
+	                <?php echo get_translate('Artists', 'Артисты'); ?>
+                </div>
+                <div class="exportArtistsForm">
+                    <form id="makeArtistsExport" action="" method="post">
+                        <input hidden type="text" name="source-artists-csv" value="<?php echo base_url('view/uploads/export/' . $siteNameExport . '-artists.csv'); ?>">
+                        <?php if (file_exists($artstsCSV)) : ?>
+                            <a class="button downloadCsv" href="<?php echo base_url('view/uploads/export/' . $siteNameExport . '-artists.csv'); ?>" download>
+                                <?php echo get_translate('Download Latest Generated Artists List', 'Скачать Последний Сгенерированый Список Артистов'); ?>
+                            </a>
+                            <button type="submit" name="deleteExportArtists" class="button">
+		                        <?php echo get_translate('Delete Export File', 'Удалить Файл Экспорта'); ?>
+                            </button>
+                            <span>
+                                <?php echo get_translate('Export file already exist.', 'Файл экспорта создан.'); ?>
+                            </span>
+                        <?php else : ?>
+                            <button type="submit" name="exportArtists" class="button">
+		                        <?php echo get_translate('Export Artists', 'Экспортировать Артистов'); ?>
+                            </button>
+                            <span>
+                                <?php echo get_translate('Export will create CSV file.', 'Экспорт создаст CSV файл.'); ?>
+                            </span>
+                        <?php endif; ?>
+                    </form>
+                </div>
+            </h1>
         </div>
         <div class="col-md-12 col-card">
             <div class="newsSection card">

@@ -84,7 +84,9 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1.pageTitle{
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     position: relative;
     font-size: 36px;
     text-transform: uppercase;
@@ -92,6 +94,48 @@ h1.pageTitle{
     color: #101419;
     margin-bottom: 15px;
     margin-top: 30px;
+}
+
+h1.pageTitle .pageTitleLayer{
+    display: inline-block;
+    position: relative;
+}
+
+h1.pageTitle .exportArtistsForm{
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+h1.pageTitle .exportArtistsForm span{
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-family: 'Nunito Sans', sans-serif;
+    margin-top: 10px;
+}
+
+a.downloadCsv,
+h1.pageTitle .exportArtistsForm button{
+    text-transform: capitalize;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+a.downloadCsv:hover,
+h1.pageTitle .exportArtistsForm button:hover{
+    color: #fff;
+}
+
+a.downloadCsv{
+    font-size: 12px;
+}
+
+button[name="deleteExportArtists"]{
+    margin-left: 10px;
 }
 
 .engineLogo{
