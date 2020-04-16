@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="theme-color" content="#cfa167">
         <meta charset="utf-8">
         <title><?php echo get_translate('Manager Dashboard', 'Панель Управления'); ?> | <?php echo get_dashboard_page() . get_option('site_name'); ?></title>
         <link rel="stylesheet" href="<?php echo get_assets('bootstrap', 'style'); ?>">
