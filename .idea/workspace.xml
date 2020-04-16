@@ -20,23 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="692391a8-8d8e-43b5-8cb1-f579a8ba5874" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/composerJson.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/intakepromo.loc.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sshConfigs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/css/manager-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/css/manager-dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/css/manager.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/css/manager.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/partials/page-artists.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-artists.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +125,7 @@
       <workItem from="1587046718562" duration="1919000" />
       <workItem from="1587048687431" duration="234000" />
       <workItem from="1587048933584" duration="462000" />
-      <workItem from="1587049409458" duration="14784000" />
+      <workItem from="1587049409458" duration="14907000" />
     </task>
     <servers />
   </component>
