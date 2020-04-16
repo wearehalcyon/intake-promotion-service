@@ -20,7 +20,7 @@
                     <img src="../../../includes/assets/images/intakePromotionLogoBlack.png" alt="Intake Promo Logo">
                 </div>
                 <?php
-                    if ( isset($_POST['dbname']) && isset($_POST['dblogin']) && isset($_POST['dbserver']) ) {
+                if ( isset($_POST['dbname']) && isset($_POST['dblogin']) && isset($_POST['dbserver']) ) {
                     // Get config.php Source Code
                     $dbsource = '
 <?php
@@ -29,7 +29,7 @@
      * Redbean version 5.5 Beta 2
      */
     require(\'lib/redbean.php\');
-    
+
     /**
      * Connection to Database variables
      * Insert your connection values here
@@ -43,22 +43,22 @@
     $dblogin = \'' . $_POST['dblogin'] . '\';
     $dbpassword = \'' . $_POST['dbpassword'] . '\';
     $dbserver = \'' . $_POST['dbserver'] . '\';
-    
+
     /**
      * Database Redbean connection class
      * Used variables above
      */
     R::setup("mysql:host={$dbserver};dbname={$dbname}", "{$dblogin}", "{$dbpassword}");
-    
+
     /**
      * Start session
      */
     session_start();
     ';
-                    $createdbconfig = fopen(__DIR__ . '..\..\..\config.php', 'w+');
+                    $createdbconfig = fopen(dirname(__DIR__) . '/../config.php', 'w+');
                     fwrite($createdbconfig, $dbsource);
                     fclose($createdbconfig);
-                ?>
+                    ?>
                     <h2 class="setupTitle">Connection With Database</h2>
                     <div class="card">
                         <p class="welcome">

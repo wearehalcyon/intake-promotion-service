@@ -5,7 +5,7 @@
      * Redbean version 5.5 Beta 2
      */
     require('lib/redbean.php');
-    
+
     /**
      * Connection to Database variables
      * Insert your connection values here
@@ -19,13 +19,13 @@
     $dblogin = 'root';
     $dbpassword = 'root';
     $dbserver = 'localhost';
-    
+
     /**
      * Database Redbean connection class
      * Used variables above
      */
     R::setup("mysql:host={$dbserver};dbname={$dbname}", "{$dblogin}", "{$dbpassword}");
-    
+
     /**
      * Start session
      */

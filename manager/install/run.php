@@ -1,5 +1,5 @@
 <?php
-    require('../../config.php');
+    require(dirname(__DIR__) . '/../config.php');
 ?>
 <!doctype html>
 <html lang="en">
