@@ -3,6 +3,13 @@
 $mem_start = memory_get_usage();
 
 /**
+ * Get Version
+ */
+function get_version(){
+    return '1.0.1';
+}
+
+/**
  * Get File
  * The same is require but with ABTH PATH
  */
@@ -192,7 +199,3 @@ function get_user_value($value = null){
     $results = R::findOne('artists', 'id = ?', [$user->{'id'}]);
     return  $results[$value];
 }
-
-/*
- * Get tables list
- */

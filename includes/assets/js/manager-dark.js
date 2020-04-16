@@ -66,7 +66,7 @@
 
     // Fancybox 3
     $('[data-fancybox]').fancybox({
-    	// Options will go here
+        // Options will go here
     });
 
     // Refresh CPU

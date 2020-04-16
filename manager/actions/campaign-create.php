@@ -1,4 +1,5 @@
 <?php
+$last_record = R::findLast('promos');
 $data = $_POST;
 if (isset($data['createCanpaign'])) {
     $create = R::dispense('promos');

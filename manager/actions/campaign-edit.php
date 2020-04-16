@@ -180,6 +180,7 @@ if (isset($data['createCanpaign'])) {
                                         </button>
                                     </li>
                                 <?php } ?>
+                                <div id="load"></div>
                                 <div id="wavesurfer"></div>
                             </ol>
                             <div class="editableCreateNewTracklist">

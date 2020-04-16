@@ -1676,10 +1676,6 @@ th {
   border-top: 2px solid #dddddd;
 }
 
-.table .table {
-  background-color: #ffffff;
-}
-
 .table-condensed > thead > tr > th,
 .table-condensed > tbody > tr > th,
 .table-condensed > tfoot > tr > th,

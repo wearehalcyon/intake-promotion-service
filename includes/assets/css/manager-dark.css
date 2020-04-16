@@ -9,10 +9,10 @@ body{
     position: relative;
     width: 100%;
     height: 100%;
-    color: #000;
+    color: #8b939c;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 14px;
-    background-color: #eceff3;
+    background-color: #191d23;
 }
 
 a{
@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6{
     width: 100%;
     height: auto;
     padding: 10px;
-    background-color: #fff;
+    background-color: #262c33;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
     padding: 15px 0;
 }
@@ -89,7 +89,7 @@ h1.pageTitle{
     font-size: 36px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #101419;
+    color: #8b939c;
     margin-bottom: 15px;
     margin-top: 30px;
 }
@@ -164,10 +164,10 @@ ul.navMenu li a i{
 .card{
     display: block;
     position: relative;
-    background-color: #fff;
+    background-color: #262c33;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0px 2px 5px rgba(24,25,27,1);
 }
 
 .card h4{
@@ -178,7 +178,6 @@ ul.navMenu li a i{
     margin: 0;
     font-weight: 700;
     color: #56616f;
-    border-bottom: 1px solid #dedede;
 }
 
 .card p.subTitle{
@@ -191,7 +190,7 @@ ul.navMenu li a i{
 }
 
 .table > tbody > tr.currentUserLoggedIn{
-    background-color: #e0fff9;
+    background-color: #2a3d3e;
 }
 
 .labelLogo{
@@ -266,7 +265,7 @@ a.userIcon i{
     height: auto;
     border-radius: 6px;
     padding: 5px 10px;
-    background-color: #fff;
+    background-color: #262c33;
     box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
     top: calc(100% + 20px);
     right: 0;
@@ -291,7 +290,7 @@ a.userIcon i{
 }
 
 .userMetaSubNav ul li{
-    border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid #373f48;
 }
 
 .userMetaSubNav ul li:last-child{
@@ -313,18 +312,20 @@ a.userIcon i{
 input.input{
     width: 100%;
     margin-top: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #434b54;
     padding: 10px;
     border-radius: 6px;
     font-size: 16px;
     font-weight: 400;
+    background-color: #373f48;
+    color: #8b939c;
 }
 
 .button{
     border: none;
     border-radius: 6px;
-    color: #fff;
-    background-color: #000;
+    color: #101419;
+    background-color: #3dd0b5;
     padding: 8px 30px;
     font-weight: 500;
     font-size: 15px;
@@ -333,6 +334,7 @@ input.input{
 
 .button:hover{
     background-color: #1fad93;
+    color: #101419;
 }
 
 span.apiLabel{
@@ -469,7 +471,7 @@ ul.appAdminList li a{
 }
 
 ul.appAdminList li a:hover{
-    color: #000;
+    color: #00b39a;
 }
 
 .debugPan{
@@ -494,6 +496,7 @@ ul.appAdminList li a:hover{
     text-shadow: 1px 1px 1px #fff;
     transform: translateY(100%);
     transition: all .3s;
+    color: #000;
     z-index: 9999;
 }
 
@@ -510,13 +513,14 @@ button.openDebug{
     left: 15px;
     border: none;
     padding: 6px 7px;
-    color: #222;
-    background-color: #fff;
+    color: #80939c;
+    background-color: #434b54;
     border-radius: 4px;
 }
 
 button.openDebug.active{
     background-color: #b30000;
+    color: #fff;
 }
 
 .memoryUsage{
@@ -677,13 +681,13 @@ button.changeLabelLogo.active,
 form.dropzone,
 .upload_photo{
     border-radius: 10px;
-    border: 4px dashed #ccc;
+    border: 4px dashed #434b54;
     transition: all .4s;
 }
 
 form.dropzone:hover,
 .upload_photo:hover{
-    background-color: #f1f1f1;
+    background-color: #303740;
 }
 
 .dz-image-preview{
@@ -741,7 +745,7 @@ ul.mlList li a{
     position: relative;
     text-align: center;
     font-size: 72px;
-    color: #444;
+    color: #8b939c;
     transition: all .2s;
     line-height: 15px;
     padding: 14px 0px;
@@ -759,7 +763,7 @@ ul.mlList li a i.file-ext{
 }
 
 ul.mlList li a:hover{
-    background-color: #f1f1f1;
+    background-color: #373e46;
 }
 
 ul.mlList li a:hover i{
@@ -861,9 +865,13 @@ p.formControl input[type="text"],
 p.formControl input[type="email"],
 p.formControl input[type="password"]{
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid #434b54;
     padding: 10px;
     border-radius: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #373f48;
+    color: #8b939c;
 }
 
 p.formControl textarea{
@@ -899,7 +907,7 @@ p.formControl textarea{
     position: relative;
     width: 100%;
     height: auto;
-    background-color: #fff;
+    background-color: #262c33;
     margin-top: 30px;
     box-shadow: 0px 0px 5px rgba(0,0,0,.1);
 }
@@ -922,12 +930,12 @@ p.formControl textarea{
 }
 
 a.viewCampaignLink{
-    color: #000;
+    color: #3dd0bb;
     font-size: 20px;
 }
 
 a.viewCampaignLink:hover{
-    color: #3dd0bb;
+    opacity: .5;
 }
 
 .cardActionLink{
@@ -952,12 +960,13 @@ a.viewCampaignLink:hover{
 
 .campaignSetName input{
     width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
+    border: 1px solid #434b54;
     padding: 10px;
+    border-radius: 6px;
     font-size: 20px;
     font-weight: 700;
-    border-radius: 6px;
+    background-color: #373f48;
+    color: #8b939c;
 }
 .campaignNewContent{
     display: block;
@@ -1001,13 +1010,13 @@ p.formControl .nice-select{
     margin-top: 30px;
     padding: 10px;
     border-radius: 6px;
-    color: #fff;
+    color: #191d23;
     background-color: #3dd0b5;
 }
 
 .campaignCreated a{
     font-weight: 700;
-    color: #fff;
+    color: #191d23;
 }
 
 .campaignCreated a:hover{
@@ -1019,6 +1028,7 @@ p.formControl .nice-select{
     padding: 0;
     font-size: 20px;
     color: #b30000;
+    background-color: transparent;
 }
 
 .deleteCampaignQuckly button:hover{
@@ -1027,7 +1037,7 @@ p.formControl .nice-select{
 
 .atfRow{
     position: relative;
-    border-bottom: 1px solid #dedede;
+    border-bottom: 1px solid #434b54;
     padding-top: 10px;
 }
 
@@ -1154,7 +1164,7 @@ p.formControl .nice-select{
 ol.currentTracklist{
     display: block;
     list-style: none;
-    border-top: 1px solid #dedede;
+    border-top: 1px solid #434b54;
 }
 
 ol.currentTracklist strong{
@@ -1171,18 +1181,18 @@ ol.multitrackTracklist strong.mtl{
 
 ol.currentTracklist li{
     padding: 5px 10px 5px 10px;
-    border-top: 1px solid #dedede;
+    border-top: 1px solid #434b54;
 }
 
 ol.currentTracklist,
 ol.currentTracklist li:last-child{
-    border-bottom: 1px solid #dedede;
-    border-left: 1px solid #dedede;
-    border-right: 1px solid #dedede;
+    border-bottom: 1px solid #434b54;
+    border-left: 1px solid #434b54;
+    border-right: 1px solid #434b54;
 }
 
 #wavesurfer{
-    border-top: 1px solid #dedede;
+    border-top: 1px solid #434b54;
 }
 
 .ditableTracklist,
@@ -1201,6 +1211,8 @@ button.playTrack{
     font-size: 16px;
     padding: 0px;
     border: none;
+    background-color: transparent;
+    color: #8b9399;
 }
 
 button.playTrack:hover,
@@ -1230,6 +1242,42 @@ button.playTrack.played{
     opacity: 0;
 }
 
+.nice-select{
+    background-color: #373f47;
+    border-color: #434b54;
+}
+
+.nice-select:hover{
+    border-color: #434b54;
+}
+
+.nice-select .list{
+    background-color: #373f47;
+}
+
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected.focus{
+    background-color: #373f47;
+    color: #00b39a;
+}
+
+.nice-select .list li{
+    border-bottom: 1px solid #414952;
+}
+
+.nice-select .list li:last-child{
+    border-bottom: none;
+}
+
+.users-artists-table > thead > tr > th, .users-artists-table > tbody > tr > th, .users-artists-table > tfoot > tr > th, .users-artists-table > thead > tr > td, .users-artists-table > tbody > tr > td, .users-artists-table > tfoot > tr > td {
+    border-top: 1px solid #373f48;
+}
+
+.users-artists-table > thead > tr > th{
+    border-bottom: 2px solid #373f48;
+}
+
 .footerRow{
     display: flex;
     flex-wrap: wrap;
@@ -1242,6 +1290,11 @@ button.playTrack.played{
 
 .footerRow a{
     font-weight: 700;
+    color: #579489;
+}
+
+.footerRow a:hover{
+    color: #396f65;
 }
 
 .footerRow ul{
@@ -1260,8 +1313,183 @@ button.playTrack.played{
 }
 
 .pretty.p-switch.p-fill input:checked~.state label:after{
-    background-color: #fff !important;
+    background-color: #373f47 !important;
 }
+
+.upload_photo{
+    background-color: #373f48;
+}
+
+.formControl .tox-tinymce{
+    border: none;
+}
+
+.formControl .tox .tox-statusbar{
+    background-color: #373f47;
+    border-top: 1px solid #434b54;
+}
+
+.formControl .tox .tox-menubar+.tox-toolbar,
+.formControl .tox .tox-menubar+.tox-toolbar-overlord .tox-toolbar__primary{
+    border-top: 1px solid #434b54;
+}
+
+.formControl .tox:not([dir=rtl]) .tox-toolbar__group:not(:last-of-type){
+    border-right: 1px solid #434b54;
+}
+
+.formControl .tox .tox-statusbar a,
+.formControl .tox .tox-statusbar__path-item,
+.formControl .tox .tox-statusbar__wordcount{
+    color: #56616f;
+}
+
+.formControl .tox .tox-edit-area__iframe,
+.formControl .tox .tox-toolbar,
+.formControl .tox .tox-toolbar__overflow,
+.formControl .tox .tox-toolbar__primary,
+.formControl .tox .tox-tbtn:hover{
+    background-color: #373f47;
+}
+
+.formControl .tox .tox-tbtn--disabled,
+.formControl .tox .tox-tbtn--disabled:hover,
+.formControl .tox .tox-tbtn:disabled,
+.formControl .tox .tox-tbtn:disabled:hover,
+.formControl .tox-tbtn__select-label{
+    color: #626d7b;
+}
+
+.formControl .tox .tox-tbtn--disabled svg,
+.formControl .tox .tox-tbtn--disabled:hover svg,
+.formControl .tox .tox-tbtn:disabled svg,
+.formControl .tox .tox-tbtn:disabled:hover svg,
+.formControl .tox .tox-tbtn svg{
+    fill: #626d7b;
+}
+
+.formControl .tox .tox-tbtn:hover,
+.formControl .tox .tox-tbtn--enabled,
+.formControl .tox .tox-tbtn--enabled:hover{
+    background-color: #4d555f;
+    color: #000;
+}
+
+.dashboard .tox .tox-menu{
+    background-color: #373f47;
+    color: #56616f;
+    border: none;
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.2);
+}
+
+.dashboard .tox .tox-collection--list .tox-collection__item--active,
+.dashboard .tox .tox-collection--list .tox-collection__item--enabled{
+    background-color: #56616f;
+    color: #56616f;
+}
+
+.dashboard .tox .tox-collection__item-label{
+    color: #8b939c;
+}
+
+.formControl .tox .tox-sidebar-wrap{
+    margin-top: -2px;
+    z-index: 1;
+    border-top: 1px solid #434b54;
+}
+
+hr{
+    border-top: 1px solid #434b54;
+}
+
+@-webkit-keyframes autofill {
+    0%,100% {
+        color: #8b939c;
+        background: #373f48;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-delay: 1s; /* Safari support - any positive time runs instantly */
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+.flatpickr-calendar{
+    background-color: #373f47;
+    box-shadow: 0px 5px 40px rgba(0,0,0,0.5);
+}
+
+.flatpickr-calendar.arrowBottom:before,
+.flatpickr-calendar.arrowBottom:after,
+.flatpickr-calendar.arrowTop:before,
+.flatpickr-calendar.arrowTop:after{
+    display: none;
+}
+
+.flatpickr-day.flatpickr-disabled,
+.flatpickr-day.flatpickr-disabled:hover,
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay,
+.flatpickr-day.notAllowed,
+.flatpickr-day.notAllowed.prevMonthDay,
+.flatpickr-day.notAllowed.nextMonthDay{
+    color: #8b939c;
+    opacity: .4;
+}
+
+.flatpickr-day,
+span.flatpickr-weekday,
+.flatpickr-current-month .flatpickr-monthDropdown-months,
+.flatpickr-current-month input.cur-year{
+    color: #8b939c;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover svg{
+    fill: #8b939c;
+}
+
+.flatpickr-day.inRange,
+.flatpickr-day.prevMonthDay.inRange,
+.flatpickr-day.nextMonthDay.inRange,
+.flatpickr-day.today.inRange,
+.flatpickr-day.prevMonthDay.today.inRange,
+.flatpickr-day.nextMonthDay.today.inRange,
+.flatpickr-day:hover,
+.flatpickr-day.prevMonthDay:hover,
+.flatpickr-day.nextMonthDay:hover,
+.flatpickr-day:focus,
+.flatpickr-day.prevMonthDay:focus,
+.flatpickr-day.nextMonthDay:focus{
+    background-color: #00b39a;
+    border-color: #00b39a;
+    color: #000;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.startRange.prevMonthDay,
+.flatpickr-day.endRange.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay,
+.flatpickr-day.startRange.nextMonthDay,
+.flatpickr-day.endRange.nextMonthDay{
+    background-color: #00b39a;
+    border-color: #00b39a;
+    color: #000;
+}
+
+
 
 
 
