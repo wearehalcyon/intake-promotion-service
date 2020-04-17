@@ -4,7 +4,7 @@ require('kernel.php');
 $ds = DIRECTORY_SEPARATOR;
 
 //$storeFolder = 'uploads';
-$uploads_dir = $_SERVER['DOCUMENT_ROOT'] . '/view/uploads/manager/promos/';
+$uploads_dir = $_SERVER['DOCUMENT_ROOT'] . '/view/uploads/promos/campaign/';
 
 $temp = explode(".", $_FILES["file"]["name"]);
 //$filename = 'label-logo' . '.' . end($temp);

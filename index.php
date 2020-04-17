@@ -15,5 +15,4 @@
 	} else {
 		header('location: /manager/install/index.php');
 		exit;
-
 	}

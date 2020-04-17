@@ -54,7 +54,7 @@ if (isset($data['createCanpaign'])) {
             <div class="col-md-12">
                 <p class="campaignCreated">
                     <?php echo get_translate('Done! Campaign updated.', 'Готово! Кампания обновлена.'); ?>
-                    <a href="/manager/edit.php?type=campaign&campaign_id=<?php echo $last_record->id; ?>"><a href="<?php echo base_url('promo/index.php?id=' . $_GET['campaign_id']) ?>" target="_blank"><?php echo get_translate('View', 'Посмотреть'); ?></a>
+                    <a href="/manager/edit.php?type=campaign&campaign_id=<?php echo $last_record->id; ?>"><a href="<?php echo base_url('promo/index.php?campaign=' . $_GET['campaign_id'] . '&unique=' . hash('sha256', $promo['id'])); ?>" target="_blank"><?php echo get_translate('View', 'Посмотреть'); ?></a>
                 </p>
             </div>
         </div>
@@ -71,7 +71,7 @@ if (isset($data['createCanpaign'])) {
                     <h4><?php echo get_translate('Cover', 'Обложка'); ?></h4>
                     <div class="campaignNewContent">
                         <div class="coverPreview">
-                            <img src="<?php echo base_url('view/uploads/manager/promos/'.$create->promo_cover) ?>" alt="Cover Preview">
+                            <img src="<?php echo base_url('view/uploads/promos/campaign/'.$create->promo_cover) ?>" alt="Cover Preview">
                         </div>
                         <input type="text" name="cover" value="<?php echo $create->promo_cover; ?>" hidden>
                         <div id="dropzone" class="photoChanger">

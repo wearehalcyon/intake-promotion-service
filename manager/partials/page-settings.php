@@ -83,7 +83,7 @@
                                         <button type="button" class="button changeLabelLogo" name="button" href="javascript:;">
                                             <?php echo get_translate('Change', 'Изменить'); ?>
                                         </button>
-                                        <span class="labelLogoUrl"><?php echo base_url('view/uploads/manager/' . get_option('site_logo_url')); ?></span>
+                                        <span class="labelLogoUrl"><?php echo base_url('view/uploads/label/' . get_option('site_logo_url')); ?></span>
                                     </td>
                                 </tr>
                                 <tr>

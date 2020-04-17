@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.wrapper{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.container-fluid{
+    padding-left: 15px;
+    padding-right: 15px;
+}

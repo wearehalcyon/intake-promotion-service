@@ -43,7 +43,7 @@ if (isset($data['createCanpaign'])) {
             <div class="col-md-12">
                 <p class="campaignCreated">
                     <?php echo get_translate('Done! Campaign сreated.', 'Готово! Кампания создана.'); ?>
-                    <a href="/manager/edit.php?type=campaign&campaign_id=<?php echo $last_record->id; ?>"><?php echo get_translate('Edit', 'Изменить'); ?></a> <?php echo get_translate('or', 'или'); ?> <a href="<?php echo base_url('promo/index.php?id=' . $last_record->id) ?>" target="_blank"><?php echo get_translate('View', 'Посмотреть'); ?></a>
+                    <a href="/manager/edit.php?type=campaign&campaign_id=<?php echo $last_record->id; ?>"><?php echo get_translate('Edit', 'Изменить'); ?></a> <?php echo get_translate('or', 'или'); ?> <a href="<?php echo base_url('promo/index.php?campaign=' . $promo['id'] . '&unique=' . hash('sha256', $last_record->id)); ?>" target="_blank"><?php echo get_translate('View', 'Посмотреть'); ?></a>
                 </p>
             </div>
         </div>

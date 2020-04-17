@@ -29,7 +29,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="labelLogo">
-                                    <img src="<?php echo base_url('view/uploads/manager/' . get_option('site_logo_url')); ?>" alt="Armada Music">
+                                    <img src="<?php echo base_url('view/uploads/label/' . get_option('site_logo_url')); ?>" alt="Armada Music">
                                     <a class="settingsIconLink" href="<?php echo base_url('manager/index.php?page=settings'); ?>"><i class="fas fa-cog"></i></a>
                                 </div>
                             </div>

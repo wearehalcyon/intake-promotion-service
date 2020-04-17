@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="692391a8-8d8e-43b5-8cb1-f579a8ba5874" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/promo/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/templates/public/light/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/uploader-manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/uploader-manager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/uploader-new-cover.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/uploader-new-cover.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/uploader-track.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/uploader-track.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/actions/campaign-create.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/actions/campaign-create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/actions/campaign-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/actions/campaign-edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/partials/page-promos.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-promos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/partials/page-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/public/light/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/light/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/uploads/manager/intakePromotionLogoBlack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/uploads/manager/promos/eric-prydz-opus-jonnas-roy-remix.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/uploads/manager/promos/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/uploads/preview/index.php" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="9001" />
+  <component name="PhpServers">
+    <servers>
+      <server host="intakepromo.loc" id="9a0dc0f8-cbca-45d1-8b2a-78796c130327" name="intakepromo.loc" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3.7" />
+  <component name="PhpXdebugProxy" ide_key="PHPSTORM" host="127.0.0.1" />
+  <component name="ProjectId" id="1aPnJ118s2rWQ6RKqwTOvXHZqZQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql&#10;mariadb" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\MAMP\htdocs\intakepromo.loc\manager" />
+      <recent name="C:\MAMP\htdocs\intakepromo.loc" />
+      <recent name="C:\MAMP\htdocs\intakepromo.loc\includes" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="intakepromo.loc">
+      <method v="2" />
+    </configuration>
+    <configuration name="intakepromo.loc" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="intakepromo.loc">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="692391a8-8d8e-43b5-8cb1-f579a8ba5874" name="Default Changelist" comment="" />
+      <created>1586646021074</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586646021074</updated>
+      <workItem from="1586646023746" duration="138000" />
+      <workItem from="1586646537900" duration="130000" />
+      <workItem from="1586646679061" duration="31000" />
+      <workItem from="1586646719801" duration="714000" />
+      <workItem from="1586647450708" duration="293000" />
+      <workItem from="1586647753307" duration="24000" />
+      <workItem from="1586647787128" duration="1419000" />
+      <workItem from="1586649221498" duration="9917000" />
+      <workItem from="1586692113788" duration="13320000" />
+      <workItem from="1586772710543" duration="29585000" />
+      <workItem from="1586854424773" duration="49668000" />
+      <workItem from="1586951916112" duration="2578000" />
+      <workItem from="1586982262435" duration="11171000" />
+      <workItem from="1586999876559" duration="4740000" />
+      <workItem from="1587044839449" duration="348000" />
+      <workItem from="1587045436246" duration="332000" />
+      <workItem from="1587045797411" duration="183000" />
+      <workItem from="1587045992483" duration="160000" />
+      <workItem from="1587046167775" duration="103000" />
+      <workItem from="1587046286579" duration="419000" />
+      <workItem from="1587046718562" duration="1919000" />
+      <workItem from="1587048687431" duration="234000" />
+      <workItem from="1587048933584" duration="462000" />
+      <workItem from="1587049409458" duration="18857000" />
+      <workItem from="1587075206635" duration="5976000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="183" key="#Deployment" timestamp="1587059616218">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="183" key="#Deployment/0.0.1920.1050@0.0.1920.1050" timestamp="1587059616218" />
+    <state x="651" y="492" width="705" height="327" key="#Notifications" timestamp="1587046187164">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="651" y="492" width="705" height="327" key="#Notifications/0.0.1920.1050@0.0.1920.1050" timestamp="1587046187164" />
+    <state x="536" y="170" key="#SSH_Configurations" timestamp="1587049441688">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="536" y="170" key="#SSH_Configurations/0.0.1920.1050@0.0.1920.1050" timestamp="1587049441688" />
+    <state x="740" y="266" key="FileChooserDialogImpl" timestamp="1587045896795">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="266" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1587045896795" />
+    <state x="794" y="444" key="NewPhpFileDialog" timestamp="1587076000035">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="794" y="444" key="NewPhpFileDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1587076000035" />
+    <state x="258" y="78" width="998" height="882" key="SettingsEditor" timestamp="1587081826823">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="258" y="78" width="998" height="882" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1587081826823" />
+    <state x="812" y="175" key="ftp.server.browser" timestamp="1587047171834">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="812" y="175" key="ftp.server.browser/0.0.1920.1050@0.0.1920.1050" timestamp="1587047171834" />
+    <state x="819" y="437" key="publish.login" timestamp="1587048947085">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="819" y="437" key="publish.login/0.0.1920.1050@0.0.1920.1050" timestamp="1587048947085" />
+  </component>
+</project>

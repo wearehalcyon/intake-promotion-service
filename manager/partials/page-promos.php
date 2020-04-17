@@ -47,7 +47,7 @@ if (isset($_POST['delete_campaign'])){
                                     <th scope="row"><?php echo $cid++; ?></th>
                                     <?php
                                     if ( $promo['promo_cover'] ) {
-                                        $promoCover = '<img class="uit-cover" src="' . base_url('view/uploads/manager/promos/' . $promo['promo_cover']) . '" alt="' . $promo['promo_title'] . '">';
+                                        $promoCover = '<img class="uit-cover" src="' . base_url('view/uploads/promos/campaign/' . $promo['promo_cover']) . '" alt="' . $promo['promo_title'] . '">';
                                     } else {
                                         $promoCover = '<i class="fas fa-user-circle no-user-photo"></i>';
                                     }
@@ -68,7 +68,7 @@ if (isset($_POST['delete_campaign'])){
                                         ?>
                                     </td>
                                     <td>
-                                        <a class="viewCampaignLink" href="<?php echo base_url('promo/index.php?id=' . $promo['id']); ?>" target="_blank"><i class="fas fa-eye"></i></a>
+                                        <a class="viewCampaignLink" href="<?php echo base_url('promo/index.php?campaign=' . $promo['id'] . '&unique=' . hash('sha256', $promo['id'])); ?>" target="_blank"><i class="fas fa-eye"></i></a>
                                     </td>
                                     <td class="deleteCampaignQuckly">
                                         <form action="" method="POST">
