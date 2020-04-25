@@ -2,66 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37262d9d-308a-4c60-96f0-61fdca415bb8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/config-sample.php" beforeDir="false" afterPath="$PROJECT_DIR$/config-sample.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/ajax-forms/form-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/ajax-forms/form-settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/css/font-awesome.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/css/install.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/css/install.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/css/manager-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/css/manager-dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/css/manager.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/css/manager.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/js/install.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/js/install.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/js/jquery/1.12.4/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/js/jquery/1.12.4/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/js/jquery/3.4.1/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/js/jquery/3.4.1/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/js/manager-dark.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/js/manager-dark.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/js/manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/js/manager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/assets/js/wavesurfer.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/js/wavesurfer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/config-signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/config-signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/signup-error.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/signup-error.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/signup-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/signup-form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/signup-success.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/signup-success.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/uploader-account.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/uploader-account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/uploader-banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/uploader-banner.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/vendor/debuger-cpu.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/vendor/debuger-cpu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/vendor/media-library-explorer.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/vendor/media-library-explorer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/flat-datepicker/datepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flat-datepicker/datepicker.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/flat-datepicker/datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flat-datepicker/datepicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/actions/campaign-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/actions/campaign-edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/install/installation-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/install/installation-form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/install/license-agreement.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/install/license-agreement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/install/migrations.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/install/migrations.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/install/result.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/install/result.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/partials/page-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-about.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/partials/page-account-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-account-settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/partials/page-activation.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-activation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/partials/page-home.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/partials/page-media-library.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-media-library.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/partials/page-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/mail/dark/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/mail/dark/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/mail/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/mail/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/mail/light/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/mail/light/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer-advanced.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer-advanced.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer-main.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer-main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/partials/bottom.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/partials/bottom.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/partials/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/partials/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/partials/top.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/partials/top.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/uploads/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/uploads/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/uploads/manager/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/uploads/manager/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/uploads/manager/users-photos/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/uploads/manager/users-photos/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -92,11 +33,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/js/test.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="58" column="74" selection-start-line="58" selection-start-column="74" selection-end-line="58" selection-end-column="74" />
+                <state relative-caret-position="312">
+                  <caret line="68" column="44" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="44" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="48">
+                  <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -157,6 +107,7 @@
         <option value="$PROJECT_DIR$/view/templates/public/dark/partials/content.php" />
         <option value="$PROJECT_DIR$/view/templates/public/dark/style.css" />
         <option value="$PROJECT_DIR$/view/templates/public/dark/assets/js/test.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -187,11 +138,6 @@
             <path>
               <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
               <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
@@ -283,15 +229,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587824644049</updated>
-      <workItem from="1587824645668" duration="15353000" />
+      <workItem from="1587824645668" duration="15777000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15353000" />
+    <option name="totallyTimeSpent" value="15777000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1007" extended-state="0" />
+    <frame x="0" y="23" width="1920" height="1007" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -299,8 +245,8 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15495208" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32919955" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15495208" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -382,8 +328,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/js/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="58" column="74" selection-start-line="58" selection-start-column="74" selection-end-line="58" selection-end-column="74" />
+        <state relative-caret-position="312">
+          <caret line="68" column="44" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
