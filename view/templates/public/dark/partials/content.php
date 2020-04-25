@@ -98,10 +98,59 @@
 		                            foreach ( $tracks as $track ) {
 	                            ?>
                                     <li>
+                                        <span><i class="fas fa-headphones-alt"></i></span>
                                         <a href="javascript:;" data-track-id="<?php echo $trackID++; ?>" data-track-url="<?php echo base_url('view/uploads/promos/preview/' . str_replace(' ', '-', $track->source)); ?>"><?php echo $trackNum++ . '. ' .  $track->source; ?></a>
                                     </li>
                                 <?php } ?>
                             </ul>
+                        </div>
+                        <div class="feedback">
+                            <h4>Your Feedback:</h4>
+                            <div class="feedForm">
+                                <form action="" method="post" class="feedbackFormFlex">
+                                    <div class="formControl">
+                                        <input type="hidden" value="<?php echo get_user()->artist_alias; ?>">
+                                    </div>
+                                    <div class="formControl half-7 choose">
+                                        <span class="formControlTitle">Choose best track:</span>
+                                        <select name="choose" class="select">
+                                            <?php
+                                            foreach ( $tracks as $track ) {
+                                                $trackNameSel = $track->artist . ' - ' . $track->title . ' (' . $track->description . ')';
+                                                ?>
+                                                <option value="<?php echo $trackNameSel; ?>">
+                                                    <?php echo $trackNameSel; ?>
+                                                </option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                    <div class="formControl half-3 support">
+                                        <span class="formControlTitle">Do you support:</span>
+                                        <select name="support" class="select">
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                    <div class="formControl rate">
+                                        <span class="formControlTitle">Rate this release:</span>
+                                        <?php for($rate = 1; $rate <= 10; $rate++) { ?>
+                                            <label class="half-1" for="item-<?php echo $rate; ?>">
+                                                <input id="item-<?php echo $rate; ?>" class="checkra" name="rating" type="radio" required><span class="checkraLabel"><?php echo $rate; ?></span>
+                                            </label>
+                                        <?php } ?>
+                                    </div>
+                                    <div class="formControl feedback">
+                                        <span class="formControlTitle">Your feedback:</span>
+                                        <textarea name="message" required></textarea>
+                                    </div>
+                                    <div class="formControl submitFeedback">
+                                        <button type="submit" name="submit">
+                                            <span class="btnText">Submit Feedback</span>
+                                            <span class="btnHover"></span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
