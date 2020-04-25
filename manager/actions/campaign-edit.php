@@ -173,7 +173,7 @@ if (isset($data['createCanpaign'])) {
                                         <span class="trackMetadata">
                                             <?php echo $trackNum++ . '. ' . $track->artist . ' - ' . $track->title . ' (' . $track->description . ')'; ?>
                                         </span>
-                                        <button type="button" class="playTrack" data-preview-src="<?php echo base_url('view/uploads/preview/' . str_replace(' ', '-', $track->source)) ?>">
+                                        <button type="button" class="playTrack" data-preview-src="<?php echo base_url('view/uploads/promos/preview/' . str_replace(' ', '-', $track->source)) ?>">
                                             <span>
                                                 <i class="far fa-play-circle"></i>
                                             </span>

@@ -743,7 +743,8 @@ img.smallAvatar{
     margin-left: 10px;
 }
 
-.PhotoUploaderPopup{
+.PhotoUploaderPopup,
+.PhotoUploaderBannerPopup{
     display: block;
     position: fixed;
     width: 400px;
@@ -759,7 +760,8 @@ img.smallAvatar{
     z-index: 99;
 }
 
-.PhotoUploaderPopup.active{
+.PhotoUploaderPopup.active,
+.PhotoUploaderBannerPopup.active{
     transform: translateY(0);
 }
 

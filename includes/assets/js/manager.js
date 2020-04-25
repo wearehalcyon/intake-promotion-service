@@ -21,6 +21,10 @@
         $(this).toggleClass('active');
         $('.PhotoUploaderPopup').toggleClass('active');
     });
+    $('button.changeLabelbanner').click(function(){
+        $(this).toggleClass('active');
+        $('.PhotoUploaderBannerPopup').toggleClass('active');
+    });
     $("#upload_photo").dropzone({
         url: '/includes/uploader-account.php',
         maxFiles: 1,
@@ -36,6 +40,19 @@
     });
     $("#upload_photo_manager").dropzone({
         url: '/includes/uploader-manager.php',
+        maxFiles: 1,
+        acceptedFiles: '.jpg, .png',
+        thumbnail: function(file, dataUrl) {
+            $('.userPhoto img, img[data-dz-thumbnail]').attr('src', dataUrl);
+            setTimeout(function() {
+                $('.PhotoUploaderPopup').removeClass('active');
+                window.location.replace('/manager/index.php?page=settings');
+            }, 2000);
+        },
+        resizeMethod: 'crop'
+    });
+    $("#upload_photo_banner").dropzone({
+        url: '/includes/uploader-banner.php',
         maxFiles: 1,
         acceptedFiles: '.jpg, .png',
         thumbnail: function(file, dataUrl) {

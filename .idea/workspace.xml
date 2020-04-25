@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="37262d9d-308a-4c60-96f0-61fdca415bb8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/config-sample.php" beforeDir="false" afterPath="$PROJECT_DIR$/config-sample.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/ajax-forms/form-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/ajax-forms/form-settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/assets/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/assets/css/install.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/css/install.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/assets/css/manager-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/css/manager-dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/assets/css/manager.css" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/css/manager.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/assets/js/install.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/js/install.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/assets/js/jquery/1.12.4/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/js/jquery/1.12.4/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/assets/js/jquery/3.4.1/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/js/jquery/3.4.1/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/assets/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/assets/js/manager-dark.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/js/manager-dark.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/assets/js/manager.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/js/manager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/assets/js/wavesurfer.js" beforeDir="false" afterPath="$PROJECT_DIR$/includes/assets/js/wavesurfer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/config-signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/config-signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/signup-error.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/signup-error.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/signup-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/signup-form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/signup-success.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/signup-success.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/uploader-account.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/uploader-account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/uploader-banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/uploader-banner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/vendor/debuger-cpu.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/vendor/debuger-cpu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/vendor/media-library-explorer.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/vendor/media-library-explorer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flat-datepicker/datepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flat-datepicker/datepicker.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flat-datepicker/datepicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flat-datepicker/datepicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/actions/campaign-edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/actions/campaign-edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/install/installation-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/install/installation-form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/install/license-agreement.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/install/license-agreement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/install/migrations.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/install/migrations.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/install/result.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/install/result.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/partials/page-about.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-about.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/partials/page-account-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-account-settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/partials/page-activation.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-activation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/partials/page-home.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/partials/page-media-library.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-media-library.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/partials/page-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/partials/page-settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/manager/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/mail/dark/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/mail/dark/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/mail/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/mail/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/mail/light/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/mail/light/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/assets/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer-advanced.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer-advanced.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer-main.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer-main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/partials/bottom.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/partials/bottom.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/partials/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/partials/content.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/partials/top.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/partials/top.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/templates/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/uploads/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/uploads/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/uploads/manager/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/uploads/manager/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/uploads/manager/users-photos/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/uploads/manager/users-photos/index.php" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.69628227">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="content.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/view/templates/public/dark/partials/content.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="219">
+                  <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/js/main.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-383">
+                  <caret line="17" column="254" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="254" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/js/test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="480">
+                  <caret line="58" column="74" selection-start-line="58" selection-start-column="74" selection-end-line="58" selection-end-column="74" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="wavesurfer-advanced.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer-advanced.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3856">
+                  <caret line="309" column="24" selection-start-line="309" selection-start-column="24" selection-end-line="313" selection-end-column="27" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/view/templates/public/dark/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="479">
+                  <caret line="237" column="15" selection-start-line="237" selection-start-column="15" selection-end-line="237" selection-end-column="15" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>wavesurfer-player</find>
+      <find>.playBtn button</find>
+      <find>.load</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/view/templates/public/dark/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer.js" />
+        <option value="$PROJECT_DIR$/includes/kernel.php" />
+        <option value="$PROJECT_DIR$/view/templates/public/dark/index.php" />
+        <option value="$PROJECT_DIR$/view/templates/public/dark/partials/content.php" />
+        <option value="$PROJECT_DIR$/view/templates/public/dark/style.css" />
+        <option value="$PROJECT_DIR$/view/templates/public/dark/assets/js/test.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-14" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1007" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="dark" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="dark" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="dark" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="dark" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.PHP" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37262d9d-308a-4c60-96f0-61fdca415bb8" name="Default" comment="" />
+      <created>1587824644049</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587824644049</updated>
+      <workItem from="1587824645668" duration="15353000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="15353000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1920" height="1007" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15495208" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/js/test.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/public/dark/partials/bottom.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="5130" column="38" lean-forward="true" selection-start-line="5130" selection-start-column="38" selection-end-line="5130" selection-end-column="38" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/kernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="227" column="8" selection-start-line="227" selection-start-column="8" selection-end-line="228" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/public/dark/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="19" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-383">
+          <caret line="17" column="254" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="254" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/public/dark/partials/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="74" column="49" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/public/dark/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="237" column="15" selection-start-line="237" selection-start-column="15" selection-end-line="237" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer-advanced.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3856">
+          <caret line="309" column="24" selection-start-line="309" selection-start-column="24" selection-end-line="313" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/js/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="58" column="74" selection-start-line="58" selection-start-column="74" selection-end-line="58" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

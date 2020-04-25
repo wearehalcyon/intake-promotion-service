@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    outline: none;
+    outline: none !important;
 }
 
 body{
@@ -9,7 +9,52 @@ body{
     position: relative;
     width: 100%;
     background-color: #191d23;
-    color: #fff;
+    color: #8b939c;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+a,
+a:active,
+a:focus,
+a:visited{
+    font-weight: 400;
+    color: #00b39a;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #d58512;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0;
+}
+
+h4{
+    display: block;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+p{
+    display: block;
+    position: relative;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .wrapper{
@@ -22,4 +67,254 @@ body{
 .container-fluid{
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.top{
+    background-color: #262c33;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.6);
+    padding: 10px 0;
+}
+
+.logo{
+    display: block;
+    position: relative;
+}
+
+.logo a{
+    display: inline-block;
+}
+
+.logo img,
+.logo a img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 50px;
+}
+
+.flex-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -15px;
+}
+
+.content{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 40px 0 100px 0;
+}
+
+.banner{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+}
+
+.footer{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #262c33;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.6);
+    padding: 10px 0;
+}
+
+.intakeCredentials img{
+    width: auto;
+    height: auto;
+    max-height: 30px;
+    max-width: 100%;
+    opacity: .5;
+}
+
+.intakeCredentials span{
+    display: block;
+    font-size: 11px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.engineSource{
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.engineCopyright{
+    display: block;
+    position: relative;
+    text-align: right;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.engineSource span,
+.engineCopyright span{
+    display: block;
+}
+
+.contactButton{
+    display: block;
+    text-align: right;
+}
+
+.advancedRow,
+.campaignSection{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #262c33;
+    padding: 15px;
+}
+
+.title{
+    display: block;
+    position: relative;
+    margin: 20px 0;
+    padding-left: 10px;
+    border-left: 6px solid #00b39a;
+}
+
+.cover{
+    display: block;
+    position: relative;
+}
+
+.cover img{
+    width: 100%;
+    height: auto;
+}
+
+.welcome{
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.welcomeHuman{
+    display: block;
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.welcomeHuman span{
+    color: #00b39a;
+}
+
+.artistSocial ul li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.audioPreview{
+    display: block;
+    position: relative;
+}
+
+.playlist{
+    display: block;
+    position: relative;
+    border: 1px solid #8b939c;
+}
+
+ul.player li.waveform{
+    display: flex;
+    flex-wrap: wrap;
+    height: 0px;
+    overflow: hidden;
+}
+
+ul.player li.waveform.active{
+    height: auto;
+}
+
+.playBtn{
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.playBtn button{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 26px;
+    padding: 0;
+    border-radius: 0;
+    color: #00b39a;
+}
+
+.playBtn button:hover,
+.playBtn button:active,
+.playBtn button:focus,
+.playBtn button:visited{
+    background-color: transparent;
+}
+
+.wavesurfer-player{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: calc(100% - 60px);
+    border-left: 1px solid #8b939c;
+}
+
+.trackItems{
+    display: block;
+    position: relative;
+    border-top: 1px solid #8b939c;
+}
+
+.trackItems li{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.loadingTrack{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    /*animation: loadingText 1s infinite;*/
+}
+
+.loadingTrack img{
+    width: auto;
+    height: 30px;
+}
+
+@keyframes loadingText {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .3;
+    }
+    100%{
+         opacity: 1;
+     }
+
 }

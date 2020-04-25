@@ -6,8 +6,10 @@ if ($option && R::count('options') < 1) {
     $option->site_description = 'Standalone Promotion Engine';
     $option->serial_number = NULL;
     $option->api_key = NULL;
-    $option->site_email = 'admin@admin.com';
-    $option->site_logo_url = 'intakePromotionLogoBlack.png';
+	$option->site_email = 'admin@admin.com';
+	$option->label_url = NULL;
+	$option->site_logo_url = 'intakePromotionLogoBlack.png';
+	$option->label_banner = 'intakePromotionLogoBlack.png';
     $option->site_banner = NULL;
     $option->debuger_enabler = '1';
     $option->pjax_enabler = '1';

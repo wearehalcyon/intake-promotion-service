@@ -4,7 +4,8 @@
         $update = R::findOne('options', 'id=?', [1]);
         $update->site_name = $_POST['sitename'];
         $update->site_description = $_POST['sitedescription'];
-        $update->site_email = $_POST['siteemail'];
+	    $update->site_email = $_POST['siteemail'];
+	    $update->label_url = $_POST['labelurl'];
         if (isset($_POST['debuger'])) {
             $update->debuger_enabler = 1;
         } elseif (!isset($_POST['debuger'])) {
@@ -36,7 +37,16 @@
         <div id="dropzone" class="photoChanger">
             <div id="upload_photo_manager" class="upload_photo">
                 <div class="dz-message">
-                    <?php echo get_translate('Upload Image Here<br>(Only JPG/PNG)', 'Загружайте изображения сюда<br>(Только JPG/PNG)'); ?>
+					<?php echo get_translate('Upload Image Here<br>(Only JPG/PNG)', 'Загружайте изображения сюда<br>(Только JPG/PNG)'); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="PhotoUploaderBannerPopup">
+        <div id="dropzone" class="photoChanger">
+            <div id="upload_photo_banner" class="upload_photo">
+                <div class="dz-message">
+					<?php echo get_translate('Upload Image Here<br>(Only JPG/PNG)', 'Загружайте изображения сюда<br>(Только JPG/PNG)'); ?>
                 </div>
             </div>
         </div>
@@ -56,7 +66,7 @@
                                         <strong><?php echo get_translate('Name', 'Название'); ?></strong>
                                     </td>
                                     <td>
-                                        <input class="input" type="text" name="sitename" value="<?php echo get_option('site_name'); ?>" placeholder="Site Name">
+                                        <input class="input" type="text" name="sitename" value="<?php echo get_option('site_name'); ?>" placeholder="">
                                     </td>
                                 </tr>
                                 <tr>
@@ -64,7 +74,7 @@
                                         <strong><?php echo get_translate('Meta Description', 'Meta Описание'); ?></strong>
                                     </td>
                                     <td>
-                                        <input class="input" type="text" name="sitedescription" value="<?php echo get_option('site_description'); ?>" placeholder="Site Meta Description">
+                                        <input class="input" type="text" name="sitedescription" value="<?php echo get_option('site_description'); ?>">
                                     </td>
                                 </tr>
                                 <tr>
@@ -72,7 +82,15 @@
                                         <strong><?php echo get_translate('Email', 'Email'); ?></strong>
                                     </td>
                                     <td>
-                                        <input class="input" type="text" name="siteemail" value="<?php echo get_option('site_email'); ?>" placeholder="Site Email">
+                                        <input class="input" type="text" name="siteemail" value="<?php echo get_option('site_email'); ?>">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong><?php echo get_translate('Label Site URL', 'Ссылка На Сайт Лейбла'); ?></strong>
+                                    </td>
+                                    <td>
+                                        <input class="input" type="text" name="labelurl" value="<?php echo get_option('label_url'); ?>">
                                     </td>
                                 </tr>
                                 <tr>
@@ -81,9 +99,20 @@
                                     </td>
                                     <td>
                                         <button type="button" class="button changeLabelLogo" name="button" href="javascript:;">
-                                            <?php echo get_translate('Change', 'Изменить'); ?>
+			                                <?php echo get_translate('Change', 'Изменить'); ?>
                                         </button>
                                         <span class="labelLogoUrl"><?php echo base_url('view/uploads/label/' . get_option('site_logo_url')); ?></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong><?php echo get_translate('Label Logo', 'Логотип Лейбла'); ?></strong>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="button changeLabelbanner" name="button" href="javascript:;">
+			                                <?php echo get_translate('Change', 'Изменить'); ?>
+                                        </button>
+                                        <span class="labelLogoUrl"><?php echo base_url('view/uploads/label/' . get_option('label_banner')); ?></span>
                                     </td>
                                 </tr>
                                 <tr>

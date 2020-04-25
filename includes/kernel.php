@@ -215,6 +215,7 @@
 		echo '<title>' . get_option('site_name') . ' | ' . $pageTitle . ' Promo Pool</title>';
 		echo '<link rel="stylesheet" href="' . get_assets('bootstrap', 'style') . '">';
 		echo '<link rel="stylesheet" href="' . get_assets('nice-select', 'style') . '">';
+		echo '<link rel="stylesheet" href="' . get_assets('font-awesome', 'style') . '">';
 		echo '<link rel="stylesheet" href="' . base_url('view/templates/public/' . $themeFolder . '/style.css') . '">';
 	}
 
@@ -224,7 +225,6 @@
 	function get_tpl_footer(){
 		$campaignID = $_GET['campaign'];
 		$promo = R::findOne('promos', 'id = ?', [$campaignID]);
-		$themeFolder = $promo['promo_public_theme'];
 		echo '<script src="' . get_assets('jquery/3.4.1/jquery.min', 'script') . '"></script>';
 		echo '<script src="' . get_assets('nice-select', 'script') . '"></script>';
 	}
@@ -245,4 +245,10 @@
 		return base_url('view/uploads/label/' . get_option('site_logo_url'));
 	}
 
-
+	/**
+	 * Get User
+	 */
+	function get_user($value = null){
+		$user = $_SESSION['logged_user'];
+		return $user;
+	}
