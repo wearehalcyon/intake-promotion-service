@@ -47,7 +47,7 @@
             buttons.play.addEventListener("click", function(){
                 wavesurfer[i].playPause();
             }, false);
-            $('#wavesurfer-container-' + i + ' .loadingTrack').fadeOut(1000);
+            $('#wavesurfer-container-' + i + ' .loadingTrack').fadeOut(500);
         });
 
         if ($('ul.player li').hasClass('active') != true) {

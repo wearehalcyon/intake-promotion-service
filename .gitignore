@@ -1,3 +1,4 @@
-.idea
+$ cat .gitignore
+
 config.php
-/view/uploads/promos/preview/*
+/view/uploads/promos/preview

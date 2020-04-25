@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37262d9d-308a-4c60-96f0-61fdca415bb8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/templates/public/dark/assets/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/assets/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/assets/js/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer-advanced.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer-main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/partials/content.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/partials/content.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/templates/public/dark/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/templates/public/dark/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,20 +17,29 @@
     <splitter split-orientation="horizontal" split-proportion="0.69628227">
       <split-first>
         <leaf>
-          <file leaf-file-name="content.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="content.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/templates/public/dark/partials/content.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="611">
+                <state relative-caret-position="178">
                   <caret line="146" column="74" selection-start-line="146" selection-start-column="74" selection-end-line="146" selection-end-column="74" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="72">
+                  <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/js/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="7" column="15" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="15" />
+                <state relative-caret-position="190">
+                  <caret line="49" column="72" selection-start-line="49" selection-start-column="72" selection-end-line="49" selection-end-column="72" />
                 </state>
               </provider>
             </entry>
@@ -97,12 +101,12 @@
         <option value="$PROJECT_DIR$/view/templates/public/dark/assets/js/wavesurfer.js" />
         <option value="$PROJECT_DIR$/includes/kernel.php" />
         <option value="$PROJECT_DIR$/view/templates/public/dark/assets/js/test.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/view/templates/public/dark/index.php" />
-        <option value="$PROJECT_DIR$/view/templates/public/dark/assets/js/main.js" />
         <option value="$PROJECT_DIR$/view/templates/public/dark/assets/css/checkra.css" />
         <option value="$PROJECT_DIR$/view/templates/public/dark/style.css" />
         <option value="$PROJECT_DIR$/view/templates/public/dark/partials/content.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/view/templates/public/dark/assets/js/main.js" />
       </list>
     </option>
   </component>
@@ -133,65 +137,6 @@
             <path>
               <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
               <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="dark" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="dark" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="dark" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="intakepromo.loc" type="b2602c69:ProjectViewProjectNode" />
-              <item name="intakepromo.loc" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="dark" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -229,12 +174,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587824644049</updated>
-      <workItem from="1587824645668" duration="23055000" />
+      <workItem from="1587824645668" duration="23381000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23055000" />
+    <option name="totallyTimeSpent" value="23381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1007" extended-state="6" />
@@ -245,7 +190,7 @@
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32919955" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32919955" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15495208" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
@@ -284,13 +229,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/js/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -326,13 +264,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/css/checkra.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-604" />
@@ -347,8 +278,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/templates/public/dark/partials/content.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
+        <state relative-caret-position="178">
           <caret line="146" column="74" selection-start-line="146" selection-start-column="74" selection-end-line="146" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/templates/public/dark/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="49" column="72" selection-start-line="49" selection-start-column="72" selection-end-line="49" selection-end-column="72" />
         </state>
       </provider>
     </entry>
