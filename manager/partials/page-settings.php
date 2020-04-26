@@ -17,6 +17,15 @@
         } elseif (!isset($_POST['app_ui_mode'])) {
             $update->app_ui_mode = 0;
         }
+	    $appScoial = [
+		    'facebook' => $_POST['facebook'],
+		    'twitter' => $_POST['twitter'],
+		    'instagram' => $_POST['instagram'],
+		    'vk' => $_POST['vk'],
+		    'linkedin' => $_POST['linkedin'],
+		    'youtube' => $_POST['youtube'],
+	    ];
+        $update->app_social = json_encode($appScoial,JSON_UNESCAPED_SLASHES);
         R::store($update);
         echo '<meta http-equiv="refresh" content="0; URL=/manager/index.php?page=settings&result=updated">';
     }
@@ -106,7 +115,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong><?php echo get_translate('Label Logo', 'Логотип Лейбла'); ?></strong>
+                                        <strong><?php echo get_translate('Label Banner', 'Баннер Лейбла'); ?></strong>
                                     </td>
                                     <td>
                                         <button type="button" class="button changeLabelbanner" name="button" href="javascript:;">
@@ -200,23 +209,87 @@
                                         <strong><?php echo get_translate('Enable Dark Mode', 'Включить Темный Режим'); ?></strong>
                                     </td>
                                     <td>
-                                        <?php
-                                        if (get_option('app_ui_mode')) {
-                                            echo '<div class="pretty pretty p-switch p-fill">
+		                                <?php
+			                                if (get_option('app_ui_mode')) {
+				                                echo '<div class="pretty pretty p-switch p-fill">
                                                         <input type="checkbox" name="app_ui_mode" checked />
                                                         <div class="state p-success">
                                                             <label></label>
                                                         </div>
                                                     </div>';
-                                        } else {
-                                            echo '<div class="pretty pretty p-switch p-fill">
+			                                } else {
+				                                echo '<div class="pretty pretty p-switch p-fill">
                                                         <input type="checkbox" name="app_ui_mode" />
                                                         <div class="state p-success">
                                                             <label></label>
                                                         </div>
                                                     </div>';
-                                        }
-                                        ?>
+			                                }
+		                                ?>
+                                    </td>
+                                </tr>
+                                <?php
+	                                $appSocials = get_option('app_social');
+	                                $appSocial = json_decode($appSocials);
+                                ?>
+                                <tr>
+                                    <td>
+                                        <strong><?php echo get_translate('Facebook', 'Facebook'); ?></strong>
+                                    </td>
+                                    <td>
+                                        <p class="formControl">
+                                            <input type="text" name="facebook" value="<?php echo $appSocial->{'facebook'}; ?>">
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong><?php echo get_translate('Twitter', 'Twitter'); ?></strong>
+                                    </td>
+                                    <td>
+                                        <p class="formControl">
+                                            <input type="text" name="twitter" value="<?php echo $appSocial->{'twitter'}; ?>">
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong><?php echo get_translate('Instagram', 'Instagram'); ?></strong>
+                                    </td>
+                                    <td>
+                                        <p class="formControl">
+                                            <input type="text" name="instagram" value="<?php echo $appSocial->{'instagram'}; ?>">
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong><?php echo get_translate('LinkedIn', 'LinkedIn'); ?></strong>
+                                    </td>
+                                    <td>
+                                        <p class="formControl">
+                                            <input type="text" name="linkedin" value="<?php echo $appSocial->{'linkedin'}; ?>">
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong><?php echo get_translate('YouTube', 'YouTube'); ?></strong>
+                                    </td>
+                                    <td>
+                                        <p class="formControl">
+                                            <input type="text" name="youtube" value="<?php echo $appSocial->{'youtube'}; ?>">
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong><?php echo get_translate('VK', 'VK'); ?></strong>
+                                    </td>
+                                    <td>
+                                        <p class="formControl">
+                                            <input type="text" name="vk" value="<?php echo $appSocial->{'vk'}; ?>">
+                                        </p>
                                     </td>
                                 </tr>
                             </tbody>

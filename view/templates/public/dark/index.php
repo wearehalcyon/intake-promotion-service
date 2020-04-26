@@ -3,7 +3,6 @@
 <head>
     <?php get_tpl_header(); ?>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo base_url('view/templates/public/dark/assets/css/checkra.css'); ?>">
 </head>
 <body>
 	<div class="wrapper">
@@ -17,8 +16,5 @@
         ?>
     </div>
 	<?php get_tpl_footer(); ?>
-    <script src="<?php echo base_url('view/templates/public/dark/assets/js/wavesurfer.js'); ?>"></script>
-    <script src="<?php echo base_url('view/templates/public/dark/assets/js/checkra.js'); ?>"></script>
-    <script src="<?php echo base_url('view/templates/public/dark/assets/js/main.js'); ?>"></script>
 </body>
 </html>

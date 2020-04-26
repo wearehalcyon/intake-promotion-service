@@ -5128,4 +5128,3 @@
 
             /******/ });
 });
-//# sourceMappingURL=wavesurfer.js.map

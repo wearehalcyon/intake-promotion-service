@@ -535,3 +535,33 @@ span.checkraLabel{
 .formControl.submitFeedback button:hover span.btnHover{
     opacity: 1;
 }
+
+.col-md-3.availableRelease a{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.col-md-4.availableRelease a img{
+    width: 100%;
+    height: 100%;
+}
+
+.followLabel{
+    display: block;
+    position: relative;
+}
+
+.followLabel ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.followLabel ul li{
+    margin-right: 15px;
+}
+
+.followLabel ul li a{
+    display: inline-block;
+    font-size: 20px;
+}

@@ -216,6 +216,7 @@
 		echo '<link rel="stylesheet" href="' . get_assets('bootstrap', 'style') . '">';
 		echo '<link rel="stylesheet" href="' . get_assets('nice-select', 'style') . '">';
 		echo '<link rel="stylesheet" href="' . get_assets('font-awesome', 'style') . '">';
+		echo '<link rel="stylesheet" href="' . base_url('view/templates/public/' . $themeFolder . '/assets/css/checkra.css') . '">';
 		echo '<link rel="stylesheet" href="' . base_url('view/templates/public/' . $themeFolder . '/style.css') . '">';
 	}
 
@@ -225,8 +226,12 @@
 	function get_tpl_footer(){
 		$campaignID = $_GET['campaign'];
 		$promo = R::findOne('promos', 'id = ?', [$campaignID]);
+		$themeFolder = $promo['promo_public_theme'];
 		echo '<script src="' . get_assets('jquery/3.4.1/jquery.min', 'script') . '"></script>';
 		echo '<script src="' . get_assets('nice-select', 'script') . '"></script>';
+		echo '<script src="' . base_url('view/templates/public/' . $themeFolder . '/assets/js/wavesurfer.js') . '"></script>';
+		echo '<script src="' . base_url('view/templates/public/' . $themeFolder . '/assets/js/checkra.js') . '"></script>';
+		echo '<script src="' . base_url('view/templates/public/' . $themeFolder . '/assets/js/main.js') . '"></script>';
 	}
 
 	/**

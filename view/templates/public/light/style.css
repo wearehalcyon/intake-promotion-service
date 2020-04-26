@@ -1,13 +1,60 @@
 *{
     margin: 0;
     padding: 0;
-    outline: none;
+    outline: none !important;
 }
 
 body{
     display: block;
     position: relative;
     width: 100%;
+    background-color: #eceff3;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+a,
+a:active,
+a:focus,
+a:visited{
+    font-weight: 400;
+    color: #00b39a;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #d58512;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0;
+}
+
+h4{
+    display: block;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+p{
+    display: block;
+    position: relative;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .wrapper{
@@ -20,4 +67,503 @@ body{
 .container-fluid{
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.top{
+    background-color: #fff;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
+    padding: 10px 0;
+}
+
+.logo{
+    display: block;
+    position: relative;
+}
+
+.logo a{
+    display: inline-block;
+}
+
+.logo img,
+.logo a img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 50px;
+}
+
+.flex-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -15px;
+}
+
+.content{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 40px 0 100px 0;
+}
+
+.banner{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+}
+
+.footer{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
+    padding: 10px 0;
+}
+
+.intakeCredentials img{
+    width: auto;
+    height: auto;
+    max-height: 30px;
+    max-width: 100%;
+    opacity: .5;
+}
+
+.intakeCredentials span{
+    display: block;
+    font-size: 11px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.engineSource{
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.engineCopyright{
+    display: block;
+    position: relative;
+    text-align: right;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.engineSource span,
+.engineCopyright span{
+    display: block;
+}
+
+.contactButton{
+    display: block;
+    text-align: right;
+}
+
+.advancedRow,
+.campaignSection{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.title{
+    display: block;
+    position: relative;
+    margin: 20px 0;
+    padding-left: 10px;
+    border-left: 6px solid #00b39a;
+}
+
+.cover{
+    display: block;
+    position: relative;
+}
+
+.cover img{
+    width: 100%;
+    height: auto;
+}
+
+.welcome{
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.welcomeHuman{
+    display: block;
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.welcomeHuman span{
+    color: #00b39a;
+}
+
+.artistSocial ul li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.audioPreview{
+    display: block;
+    position: relative;
+}
+
+.playlist{
+    display: block;
+    position: relative;
+    border: 1px solid #8b939c;
+}
+
+ul.player li.waveform{
+    display: flex;
+    flex-wrap: wrap;
+    height: 0px;
+    overflow: hidden;
+}
+
+ul.player li.waveform.active{
+    height: auto;
+}
+
+.playBtn{
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.playBtn button{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    font-size: 26px;
+    padding: 0;
+    border-radius: 0;
+    color: #00b39a;
+}
+
+.playBtn button:hover,
+.playBtn button:active,
+.playBtn button:focus,
+.playBtn button:visited{
+    background-color: transparent;
+}
+
+.wavesurfer-player{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: calc(100% - 60px);
+    border-left: 1px solid #8b939c;
+}
+
+.trackItems{
+    display: block;
+    position: relative;
+    border-top: 1px solid #8b939c;
+}
+
+.trackItems li{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.loadingTrack{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.loadingTrack img{
+    width: auto;
+    height: 30px;
+}
+
+ul.trackItems li{
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+ul.trackItems li:last-child{
+    border-bottom: none;
+}
+
+ul.trackItems li a{
+    width: 100%;
+    display: block;
+    padding: 5px 10px;
+}
+
+ul.trackItems li.active{
+    background-color: rgba(0,179,154,.1);
+}
+
+ul.trackItems li.active a{
+    color: #8b939c;
+}
+
+ul.trackItems li span{
+    display: none;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    color: #00b39a;
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+ul.trackItems li.active.playing span{
+    display: inline-block;
+    animation: playingNow 1s infinite;
+}
+
+@keyframes playingNow {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .3;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.feedForm{
+    display: block;
+    position: relative;
+}
+
+.feedForm .formControl{
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.feedForm .formControl input[type="text"],
+.feedForm .formControl input[type="email"],
+.feedForm .formControl textarea{
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 10px;
+    background-color: rgba(0,0,0,.05);
+    color: #8b939c;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.formControl .select{
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.1);
+    background-color: rgba(0,0,0,.05);
+    color: #8b939c;
+    font-size: 16px;
+}
+
+.formControl .select ul.list{
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.2);
+}
+
+.formControl .select ul.list li:hover,
+.formControl .select ul.list li.selected{
+    background-color: #00b39a;
+    color: #000;
+}
+
+span.formControlTitle{
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+form.feedbackFormFlex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.half-1{
+    width: 10%;
+}
+
+.half-2{
+    width: 20%;
+}
+
+.half-3{
+    width: 30%;
+}
+
+.half-4{
+    width: 40%;
+}
+
+.half-5{
+    width: 50%;
+}
+
+.half-6{
+    width: 60%;
+}
+
+.half-7{
+    width: 70%;
+}
+
+.half-8{
+    width: 80%;
+}
+
+.half-9{
+    width: 90%;
+}
+
+.half-10{
+    width: 100%;
+}
+
+.formControl.choose{
+    padding-right: 10px;
+}
+
+.formControl.support{
+    padding-left: 10px;
+}
+
+.feedForm .formControl textarea{
+    resize: none;
+    height: 150px;
+}
+
+.formControl.feedback{
+    width: 100%;
+}
+
+.formControl.rate{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.formControl.rate label{
+    font-size: 16px;
+}
+
+.formControl.rate label input{
+    margin-right: 10px;
+}
+
+span.checkraLabel{
+    display: inline-block;
+    position: relative;
+    top: 2px;
+}
+
+.formControl.submitFeedback{
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.formControl.submitFeedback button{
+    display: inline-block;
+    position: relative;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #000;
+    padding: 15px 40px;
+    background-image: linear-gradient(90deg, #00b39a, #00c4e4);
+    transition: all .3s;
+    overflow: hidden;
+}
+
+.formControl.submitFeedback button span.btnText{
+    position: relative;
+    transition: all .3s;
+    z-index: 2;
+}
+
+.formControl.submitFeedback button span.btnHover{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #30363d;
+    transition: all .3s;
+    opacity: 0;
+    z-index: 1;
+}
+
+.formControl.submitFeedback button:hover span.btnText{
+    color: #8b939c;
+}
+
+.formControl.submitFeedback button:hover span.btnHover{
+    opacity: 1;
+}
+
+.col-md-3.availableRelease a{
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.col-md-4.availableRelease a img{
+    width: 100%;
+    height: 100%;
+}
+
+.followLabel{
+    display: block;
+    position: relative;
+}
+
+.followLabel ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.followLabel ul li{
+    margin-right: 15px;
+}
+
+.followLabel ul li a{
+    display: inline-block;
+    font-size: 20px;
 }

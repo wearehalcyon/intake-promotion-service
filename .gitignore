@@ -1,6 +1,0 @@
-$ cat .gitignore
-
-*.DS_Store
-.DS_Store
-config.php
-/view/uploads/promos/preview
