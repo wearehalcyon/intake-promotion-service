@@ -43,7 +43,7 @@ if (isset($data['createCanpaign'])) {
             <div class="col-md-12">
                 <p class="campaignCreated">
                     <?php echo get_translate('Done! Campaign сreated.', 'Готово! Кампания создана.'); ?>
-                    <a href="/manager/edit.php?type=campaign&campaign_id=<?php echo $last_record->id; ?>"><?php echo get_translate('Edit', 'Изменить'); ?></a> <?php echo get_translate('or', 'или'); ?> <a href="<?php echo base_url('promo/index.php?campaign=' . $promo['id'] . '&unique=' . hash('sha256', $last_record->id)); ?>" target="_blank"><?php echo get_translate('View', 'Посмотреть'); ?></a>
+                    <a href="/manager/edit.php?type=campaign&campaign_id=<?php echo $last_record->id; ?>&action=edit"><?php echo get_translate('Edit', 'Изменить'); ?></a> <?php echo get_translate('or', 'или'); ?> <a href="<?php echo base_url('promo/index.php?campaign=' . $promo['id'] . '&unique=' . hash('sha256', $last_record->id)); ?>" target="_blank"><?php echo get_translate('View', 'Посмотреть'); ?></a>
                 </p>
             </div>
         </div>
@@ -205,8 +205,17 @@ if (isset($data['createCanpaign'])) {
                         <p class="formControl">
                             <strong class="forSelect"><?php echo get_translate('Public Theme', 'Публичная Тема'); ?></strong>
                             <select class="select" name="public_theme">
-                                <option value="light"><?php echo get_translate('Light', 'Светлая'); ?></option>
-                                <option value="dark"><?php echo get_translate('Dark', 'Темная'); ?></option>
+	                            <?php
+		                            $tplFolders = scandir(dirname(__DIR__) . '../../view/templates/public/');
+		                            foreach ($tplFolders as $tplFolder) {
+			                            if (!is_file($tplFolder) && $tplFolder != '.' && $tplFolder != '..') {
+				                            //echo preg_replace('/\.[^.]+$/', '', $tplFolder);
+				                            ?>
+                                            <option value="<?php echo $tplFolder; ?>" <?php if ($create->promo_public_theme == $tplFolder) echo 'selected'; ?>><?php echo ucfirst($tplFolder); ?></option>';
+				                            <?php
+			                            }
+		                            }
+	                            ?>
                             </select>
                         </p>
                         <p class="formControl">

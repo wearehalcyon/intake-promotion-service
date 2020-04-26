@@ -18,7 +18,7 @@ if (isset($_POST['delete_campaign'])){
         </div>
         <div class="col-md-12">
             <div class="cardActionLink">
-                <a href="/manager/create.php?type=campaign" class="button">
+                <a href="/manager/create.php?type=campaign&action=create" class="button">
                     <?php echo get_translate('Create New Campaign', 'Создать Новую Кампанию'); ?>
                 </a>
             </div>
@@ -54,16 +54,16 @@ if (isset($_POST['delete_campaign'])){
                                     ?>
                                     <td><?php echo $promoCover; ?></td>
                                     <td class="editCampaign">
-                                        <a href="/manager/edit.php?type=campaign&campaign_id=<?php echo $promo['id']; ?>"><?php echo $promo['promo_title']; ?></a>
+                                        <a href="/manager/edit.php?type=campaign&campaign_id=<?php echo $promo['id']; ?>&action=edit"><?php echo $promo['promo_title']; ?></a>
                                     </td>
                                     <td><?php echo $promo['promo_release_date']; ?></td>
                                     <td><?php echo $promo['promo_creation_date']; ?></td>
                                     <td class="campaignStatus">
                                         <?php
                                             if ( $promo['promo_status'] == 'active' ) {
-                                                echo '<i class="fas fa-check-circle"></i>';
+                                                echo '<span class="statusActive">Active</span>';
                                             } else {
-                                                echo '<i class="fas fa-times-circle"></i>';
+                                                echo '<span class="statusUnactive">Unactive</span>';
                                             }
                                         ?>
                                     </td>
@@ -86,7 +86,7 @@ if (isset($_POST['delete_campaign'])){
         </div>
         <div class="col-md-12">
             <div class="cardActionLink cal-bottom">
-                <a href="/manager/create.php?type=campaign" class="button">
+                <a href="/manager/create.php?type=campaign&action=create" class="button">
                     <?php echo get_translate('Create New Campaign', 'Создать Новую Кампанию'); ?>
                 </a>
             </div>

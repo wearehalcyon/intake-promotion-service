@@ -1,7 +1,7 @@
 <header class="top">
 	<div class="container">
 		<div class="flex-row">
-			<div class="col-md-4">
+			<div class="col-md-4 col-xs-6">
 				<div class="logo">
 					<?php if ( get_option('site_email') ) : ?>
                         <a href="<?php echo get_option('label_url'); ?>" target="_blank">
@@ -12,8 +12,8 @@
                     <?php endif; ?>
 				</div>
 			</div>
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
+			<div class="col-md-4 hidden-xs hidden-sm"></div>
+			<div class="col-md-4 col-xs-6">
                 <?php if ( get_option('site_email') ) : ?>
                     <div class="contactButton">
                         <a href="mailto:<?php echo get_option('site_email'); ?>">Contact</a>

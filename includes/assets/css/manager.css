@@ -1309,6 +1309,16 @@ button.playTrack.played{
     background-color: #fff !important;
 }
 
+span.statusActive{
+    font-weight: 700;
+    color: #00b39a;
+}
+
+span.statusUnactive{
+    font-weight: 700;
+    color: #b30000;
+}
+
 
 
 

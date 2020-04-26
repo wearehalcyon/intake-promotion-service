@@ -565,3 +565,17 @@ span.checkraLabel{
     display: inline-block;
     font-size: 20px;
 }
+
+@media (max-width: 992px){
+    .half-7.choose{
+        width: 100%;
+        padding-right: 0px;
+    }
+    .half-3.support{
+        width: 1005px;
+        padding-left: 0px;
+    }
+    .artistSocial ul li a{
+        margin-bottom: 10px;
+    }
+}

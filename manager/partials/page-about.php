@@ -17,7 +17,7 @@
                         <br>
                         jQuery 1.12.4
                         <br>
-                        Google Font api
+                        Google Font API
                         <br>
                         Font Awesome 5
                         <br>
@@ -27,9 +27,7 @@
                         <br>
                         TinyMCE 5
                         <br>
-                        WaveSurfer 2
-                        <br>
-                        Imagick
+                        WaveSurfer
                         <hr>
                     </p>
                     <p>

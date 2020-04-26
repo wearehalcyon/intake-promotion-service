@@ -244,6 +244,15 @@
 	}
 
 	/**
+	 * Get Page Value
+	 */
+	function get_page($value = null){
+		$campaignID = $_GET['campaign'];
+		$promo = R::findOne('promos', 'id = ?', [$campaignID]);
+		return $promo;
+	}
+
+	/**
 	 * Get Site Logo Url
 	 */
 	function get_site_logo_url(){

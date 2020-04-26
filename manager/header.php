@@ -84,10 +84,10 @@
                                             <span><i class="fas fa-home"></i> <?php echo get_translate('Home', 'Главная'); ?></span>
                                         </li>
                                     <?php endif; ?>
-                                    <?php if ( $_GET['type'] == 'campaign' ) : ?>
+	                                <?php if ( $_GET['action'] == 'create' ) : ?>
                                         <li>
                                             <a href="<?php echo base_url('manager/index.php?page=promos'); ?>">
-                                                <?php echo get_translate('Promos', 'Промо Кампании'); ?>
+				                                <?php echo get_translate('Promos', 'Промо Кампании'); ?>
                                             </a>
                                         </li>
                                         <li>
@@ -96,7 +96,20 @@
                                         <li>
                                             <span><?php echo get_translate('Create New Campaign', 'Создание Новой Кампании'); ?></span>
                                         </li>
-                                    <?php endif; ?>
+	                                <?php endif; ?>
+	                                <?php if ( $_GET['action'] == 'edit' ) : ?>
+                                        <li>
+                                            <a href="<?php echo base_url('manager/index.php?page=promos'); ?>">
+				                                <?php echo get_translate('Promos', 'Промо Кампании'); ?>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span>/</span>
+                                        </li>
+                                        <li>
+                                            <span><?php echo get_translate('Edit Campaign', 'Изменить Кампанию'); ?></span>
+                                        </li>
+	                                <?php endif; ?>
                                 </ul>
                             </div>
                         </div>

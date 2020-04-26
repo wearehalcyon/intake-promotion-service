@@ -31,7 +31,7 @@
                                 $avReleases = R::find('promos', 'id != ?', [$_GET['campaign']]);
                                 foreach ($avReleases as $avRelease) {
                             ?>
-                                <div class="col-md-4 availableRelease">
+                                <div class="col-md-4 col-xs-4 availableRelease">
                                     <a href="<?php echo base_url('promo/index.php?campaign=' . $avRelease->id . '&unique=' . hash('sha256', $avRelease->id)); ?>">
                                         <img src="<?php echo base_url('view/uploads/promos/campaign/' . $avRelease->promo_cover); ?>" alt="">
                                     </a>

@@ -33,7 +33,8 @@ if (isset($data['createCanpaign'])) {
     ];
     $update->promo_artist_social = json_encode($artistScoial, JSON_UNESCAPED_SLASHES);
     $update->promo_mail_theme = $data['mail_theme'];
-    $update->promo_public_theme = $data['public_theme'];
+	$update->promo_public_theme = $data['public_theme'];
+	$update->promo_status = $data['status'];
 
     foreach ($_POST['track'] as $track)  {
         if (!empty($track['artist']) && !empty($track['title']) && !empty($track['description']) && !empty($track['source'])) {
@@ -278,13 +279,29 @@ if (isset($data['createCanpaign'])) {
                         <p class="formControl">
                             <strong class="forSelect"><?php echo get_translate('Public Theme', 'Публичная Тема'); ?></strong>
                             <select class="select" name="public_theme">
-                                <?php if ($create->promo_public_theme == 'light') : ?>
-                                    <option value="light" selected><?php echo get_translate('Light', 'Светлая'); ?></option>
-                                    <option value="dark"><?php echo get_translate('Dark', 'Темная'); ?></option>
-                                <?php else : ?>
-                                    <option value="light"><?php echo get_translate('Light', 'Светлая'); ?></option>
-                                    <option value="dark" selected><?php echo get_translate('Dark', 'Темная'); ?></option>
-                                <?php endif; ?>
+	                            <?php
+		                            $tplFolders = scandir(dirname(__DIR__) . '../../view/templates/public/');
+		                            foreach ($tplFolders as $tplFolder) {
+			                            if (!is_file($tplFolder) && $tplFolder != '.' && $tplFolder != '..') {
+				                            //echo preg_replace('/\.[^.]+$/', '', $tplFolder);
+                                ?>
+				                    <option value="<?php echo $tplFolder; ?>" <?php if ($create->promo_public_theme == $tplFolder) echo 'selected'; ?>><?php echo ucfirst($tplFolder); ?></option>';
+                                <?php
+			                            }
+		                            }
+	                            ?>
+                            </select>
+                        </p>
+                        <p class="formControl">
+                            <strong class="forSelect"><?php echo get_translate('Status', 'Состояние'); ?></strong>
+                            <select class="select" name="status">
+			                    <?php if ($create->promo_status == 'active') : ?>
+                                    <option value="active" selected><?php echo get_translate('Active', 'Активно'); ?></option>
+                                    <option value="unactive"><?php echo get_translate('Unactive', 'Не Активно'); ?></option>
+			                    <?php else : ?>
+                                    <option value="active"><?php echo get_translate('Active', 'Активно'); ?></option>
+                                    <option value="unactive" selected><?php echo get_translate('Unactive', 'Не Активно'); ?></option>
+			                    <?php endif; ?>
                             </select>
                         </p>
                         <p class="formControl">
