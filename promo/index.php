@@ -7,11 +7,15 @@
 	 * Front Checking
 	 */
 	if ( $_GET ) {
-		if (file_exists('../view/templates/public/' . $themeFolder->promo_public_theme . '/index.php')) {
-			require('../view/templates/public/' . $themeFolder->promo_public_theme . '/index.php');
-			//var_dump($themeFolder);
+		if ($_SESSION['logged_user'] && get_promo('status') == 'active') {
+			if (file_exists('../view/templates/public/' . $themeFolder->promo_public_theme . '/index.php')) {
+				require('../view/templates/public/' . $themeFolder->promo_public_theme . '/index.php');
+				//var_dump($themeFolder);
+			} else {
+				echo 'Theme ERROR';
+			}
 		} else {
-			echo 'Theme ERROR';
+			require('unavailable.php');
 		}
 	} else {
 		header('Location: /');
