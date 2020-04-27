@@ -10,6 +10,10 @@ body{
     font-size: 14px;
 }
 
+body.homepage{
+    background-color: #eceff3;
+}
+
 a{
     color: #ff5e00;
     text-decoration: none;
@@ -17,6 +21,18 @@ a{
 
 a:hover{
     text-decoration: underline;
+}
+
+body.homepage a,
+body.homepage a:focus,
+body.homepage a:visited,
+body.homepage a:active{
+    color: #10bfe6;
+    text-decoration: none;
+}
+
+body.homepage a:hover{
+    color: #d69912;
 }
 
 .wrapper{
@@ -60,6 +76,7 @@ a:hover{
 
 .secTitle h4{
     text-align: center;
+    text-transform: uppercase;
 }
 
 .secBody p,
@@ -97,4 +114,218 @@ a:hover{
     text-align: center;
     padding-top: 10px;
     font-size: 11px;
+}
+
+.frontHeader{
+    display: block;
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    background-color: #fff;
+    padding: 15px 0;
+}
+
+.frontHeader .logo{
+    display: block;
+}
+
+.frontHeader .logo img{
+    width: auto;
+    height: 40px;
+}
+
+.f_wrapper{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.frontHeader .container .row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contactLabel{
+    display: block;
+    text-align: right;
+}
+
+.contactLabel a{
+    font-weight: 600;
+}
+
+.footer .container .row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer{
+    display: block;
+    position: relative;
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.intakeCredentials{
+    display: block;
+    position: relative;
+    text-align: left;
+}
+
+.intakeCredentials img{
+    width: auto;
+    height: 40px;
+}
+
+.intakeCredentials span{
+    display: block;
+    margin-top: 10px;
+}
+
+.engineCopyright{
+    display: block;
+    text-align: right;
+}
+
+section.content{
+    display: block;
+    position: relative;
+    padding: 100px 0;
+    width: 100%;
+    height: auto;
+    min-height: 700px;
+}
+
+.userWelcome{
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.userWelcome h4{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.userWelcome h4 span{
+    color: #10bfe6;
+}
+
+.userWelcome h2{
+    font-weight: 100;
+}
+
+ul.homepageNav{
+    list-style: none;
+    display: block;
+    position: relative;
+    margin-top: 10px;
+}
+
+ul.homepageNav li{
+    display: block;
+}
+
+ul.homepageNav li a{
+    display: block;
+    position: relative;
+    background-color: #fff;
+    border-radius: 6px;
+    margin: 15px 0;
+    padding: 10px;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
+    transition: all .3s;
+}
+
+ul.homepageNav li.active a,
+ul.homepageNav li a:hover{
+    background-color: #10bfe6;
+    color: #fff;
+}
+
+h2.sectionTitle{
+    display: block;
+    position: relative;
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+.sectionContent{
+    display: block;
+}
+
+.sectionContent p{
+    font-weight: 300;
+}
+
+span.campaignsCount{
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background-color: #f00;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 22px;
+    top: calc(50% - 10px);
+    right: 10px;
+    color: #fff;
+}
+
+.campaignItem{
+    display: block;
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 2px 2px rgba(0,0,0,0.05);
+    min-height: 50px;
+    margin-bottom: 30px;
+}
+
+.campaignItem a.citem{
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14px;
+    text-align: center;
+}
+
+.campaignItem a.citem span{
+    color: #000;
+}
+
+.campaignItem a.citem:hover span{
+    color: #d69912;
+}
+
+.campaignItem a img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.noAvailableCampaigns{
+    color: #000;
+    background-color: #ffd0d0;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border-radius: 6px;
+    margin-top: 30px;
+}
+
+span.relDate{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 10px;
+    color: #999;
 }

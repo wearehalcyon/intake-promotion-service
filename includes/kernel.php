@@ -211,7 +211,7 @@
 		echo '<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">';
 		echo '<meta http-equiv="X-UA-Compatible" content="ie=edge">';
 		echo '<meta name="theme-color" content="#cfa167">';
-		echo ' <meta charset="utf-8">';
+		echo '<meta charset="utf-8">';
 		echo '<title>' . get_option('site_name') . ' | ' . $pageTitle . ' Promo Pool</title>';
 		echo '<link rel="stylesheet" href="' . get_assets('bootstrap', 'style') . '">';
 		echo '<link rel="stylesheet" href="' . get_assets('nice-select', 'style') . '">';
