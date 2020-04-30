@@ -1,3 +1,15 @@
+<?php
+    require('../promo/send-feedback.php');
+    foreach ($sendFeedbacks as $sendFeedback) {
+        $track_comment = $sendFeedback->reviewer_track_comment;
+            if (!empty($track_comment)) {
+                $text_read_only = 'readonly';
+            }
+        $rated = $sendFeedback->reviewer_track_rate;
+        $choosed = $sendFeedback->reviewer_track_choosed;
+        $support = $sendFeedback->reviewer_track_support;
+    }
+?>
 <section class="content">
 	<div class="container">
         <?php if ( get_option('label_banner') ) : ?>
@@ -161,45 +173,65 @@
                             <div class="feedForm">
                                 <form action="" method="post" class="feedbackFormFlex">
                                     <div class="formControl">
-                                        <input type="hidden" value="<?php echo get_user()->artist_alias; ?>">
+                                        <input type="hidden" name="artistid" value="<?php echo get_user()->id; ?>">
                                     </div>
                                     <div class="formControl half-7 choose">
                                         <span class="formControlTitle">Choose best track:</span>
-                                        <select name="choose" class="select">
-                                            <?php
-                                            foreach ( $tracks as $track ) {
-                                                $trackNameSel = $track->artist . ' - ' . $track->title . ' (' . $track->description . ')';
-                                                ?>
-                                                <option value="<?php echo $trackNameSel; ?>">
-                                                    <?php echo $trackNameSel; ?>
-                                                </option>
-                                            <?php } ?>
-                                        </select>
+                                        <?php if ( empty($choosed) ) : ?>
+                                            <select name="choose" class="select">
+                                                <?php
+                                                foreach ( $tracks as $track ) {
+                                                    $trackNameSel = $track->artist . ' - ' . $track->title . ' (' . $track->description . ')';
+                                                    ?>
+                                                    <option value="<?php echo $trackNameSel; ?>">
+                                                        <?php echo $trackNameSel; ?>
+                                                    </option>
+                                                <?php } ?>
+                                            </select>
+                                        <?php else : ?>
+                                            <p class="alreadySubmited"><?php echo $choosed; ?></p>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="formControl half-3 support">
                                         <span class="formControlTitle">Do you support:</span>
-                                        <select name="support" class="select">
-                                            <option value="Yes">Yes</option>
-                                            <option value="No">No</option>
-                                        </select>
+                                        <?php if ( empty($support) ) : ?>
+                                            <select name="support" class="select">
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        <?php else : ?>
+                                            <p class="alreadySubmited"><?php echo $support; ?></p>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="formControl rate">
                                         <span class="formControlTitle">Rate this release:</span>
-                                        <?php for($rate = 1; $rate <= 10; $rate++) { ?>
-                                            <label class="half-1" for="item-<?php echo $rate; ?>">
-                                                <input id="item-<?php echo $rate; ?>" class="checkra" name="rating" type="radio" required><span class="checkraLabel"><?php echo $rate; ?></span>
-                                            </label>
-                                        <?php } ?>
+                                        <?php if ( empty($rated) ) : ?>
+                                            <?php for($rate = 1; $rate <= 10; $rate++) { ?>
+                                                <label class="half-1" for="item-<?php echo $rate; ?>">
+                                                    <input id="item-<?php echo $rate; ?>" class="checkra" name="rating" type="radio" value="<?php echo $rate; ?>" required><span class="checkraLabel"><?php echo $rate; ?></span>
+                                                </label>
+                                            <?php } ?>
+                                        <?php else : ?>
+                                            <p class="alreadySubmited"><?php echo $rated; ?></p>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="formControl feedback">
                                         <span class="formControlTitle">Your feedback:</span>
-                                        <textarea name="message" required></textarea>
+                                        <?php if ( empty($track_comment) ) : ?>
+                                            <textarea name="message" required></textarea>
+                                        <?php else : ?>
+                                            <p class="alreadySubmited"><?php echo $track_comment; ?></p>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="formControl submitFeedback">
-                                        <button type="submit" name="submit">
-                                            <span class="btnText">Submit Feedback</span>
-                                            <span class="btnHover"></span>
-                                        </button>
+                                        <?php if (empty($track_comment)) : ?>
+                                                <button type="submit" name="submit">
+                                                    <span class="btnText">Submit Feedback</span>
+                                                    <span class="btnHover"></span>
+                                                </button>
+                                        <?php else : ?>
+                                            <strong>Your feedback already accepted. Thank you!</strong>
+                                        <?php endif; ?>
                                     </div>
                                 </form>
                             </div>

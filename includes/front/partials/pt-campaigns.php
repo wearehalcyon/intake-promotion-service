@@ -8,11 +8,24 @@
 		<?php
             if ($promoCount > 0) {
                 foreach($promos as $promo) {
+                    $getReviews = R::findAll('reviews', 'promo_id = ? AND reviewer_id = ?', [$promo->id, get_user()->id]);
+
+                    foreach ($getReviews as $getReview){
+                        $reviewPromoID = $getReview->promo_id;
+                    }
+
+                    if (!empty($getReviews) && 1==1) {
+                        $reviewed = '<span class="reviewed">Reviewed</span>';
+                    }
         ?>
 			<div class="col-md-3 col-xs-6">
 				<div class="campaignItem">
 					<a href="<?php echo base_url('promo/index.php?campaign=' . $promo->id . '&unique=' . hash('sha256', $promo->id)); ?>" target="_blank">
 						<img src="<?php echo base_url('view/uploads/promos/campaign/' . $promo->promo_cover); ?>" alt="">
+                        <?php //echo $reviewed; ?>
+                        <?php if ($reviewPromoID === $promo->id) { ?>
+                            <span class="reviewed">Reviewed</span>
+                        <?php } ?>
 					</a>
 					<a class="citem" href="<?php echo base_url('promo/index.php?campaign=' . $promo->id . '&unique=' . hash('sha256', $promo->id)); ?>" target="_blank">
 						<span><?php echo $promo->promo_title; ?></span>

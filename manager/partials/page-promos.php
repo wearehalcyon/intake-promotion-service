@@ -6,7 +6,9 @@ $promos = R::findAll('promos', 'ORDER BY promo_creation_date DESC');
 
 if (isset($_POST['delete_campaign'])){
     $delete = R::findOne('promos', 'id = ?', [$_POST['delete_campaign']]);
+    $deleteReviews = R::findAll('reviews', 'promo_id = ?', [$_POST['delete_campaign']]);
     R::trash($delete);
+    R::trashAll($deleteReviews);
     R::freeze(true);
     echo '<meta http-equiv="refresh" content="0; URL=/manager/index.php?page=promos">';
 }

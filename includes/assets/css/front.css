@@ -329,3 +329,15 @@ span.relDate{
     font-size: 10px;
     color: #999;
 }
+
+span.reviewed{
+    position: absolute;
+    display: inline-block;
+    top: 30px;
+    right: 0px;
+    padding: 4px 10px;
+    color: #fff;
+    background-color: #1eca3b;
+    font-size: 12px;
+    font-weight: 500;
+}
