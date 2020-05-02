@@ -31,6 +31,10 @@ a:focus{
     color: #3dd0b5;
 }
 
+a.button{
+    color: #fff;
+}
+
 h1, h2, h3, h4, h5, h6{
     display: block;
     font-weight: 600;
@@ -1318,6 +1322,50 @@ span.statusUnactive{
     font-weight: 700;
     color: #b30000;
 }
+
+/* SENDPROMO */
+.sendpageRow{
+    min-height: 300px;
+    padding-top: 20px;
+}
+
+h4.previewTitle{
+    text-align: center;
+}
+
+p.previewSubtitle{
+    display: block;
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+}
+
+p.choosedTemplate{
+    display: block;
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* END SENDPROMO */
+
+.testSend{
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.testSend p.formControl input{
+    max-width: 300px;
+}
+
+.congratsCampaign,
+.submitCampaignAction{
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
 
 
 

@@ -198,15 +198,24 @@ if (isset($data['createCanpaign'])) {
                         <p class="formControl">
                             <strong class="forSelect"><?php echo get_translate('Mail Sender Theme', 'Тема Для Почтовой Рассылки'); ?></strong>
                             <select class="select" name="mail_theme">
-                                <option value="light"><?php echo get_translate('Light', 'Светлая'); ?></option>
-                                <option value="dark"><?php echo get_translate('Dark', 'Темная'); ?></option>
+                                <?php
+                                    $tplMailFolders = scandir('../view/templates/mail/');
+                                    foreach ($tplMailFolders as $tplMailFolder) {
+                                        if (!is_file($tplMailFolder) && $tplMailFolder != '.' && $tplMailFolder != '..') {
+                                            //echo preg_replace('/\.[^.]+$/', '', $tplFolder);
+                                            ?>
+                                            <option value="<?php echo $tplMailFolder; ?>" <?php if ($create->promo_mail_theme == $tplMailFolder) echo 'selected'; ?>><?php echo ucfirst($tplMailFolder); ?></option>';
+                                            <?php
+                                        }
+                                    }
+                                ?>
                             </select>
                         </p>
                         <p class="formControl">
                             <strong class="forSelect"><?php echo get_translate('Public Theme', 'Публичная Тема'); ?></strong>
                             <select class="select" name="public_theme">
 	                            <?php
-		                            $tplFolders = scandir(dirname(__DIR__) . '../../view/templates/public/');
+                                    $tplFolders = scandir('../view/templates/public/');
 		                            foreach ($tplFolders as $tplFolder) {
 			                            if (!is_file($tplFolder) && $tplFolder != '.' && $tplFolder != '..') {
 				                            //echo preg_replace('/\.[^.]+$/', '', $tplFolder);

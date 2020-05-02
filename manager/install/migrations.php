@@ -16,6 +16,7 @@ if ($option && R::count('options') < 1) {
     $option->app_language = 'en';
     $option->app_reg_access = '0';
     $option->app_social = '{"facebook": "https://facebook.com/", "instagram": "https://instagram.com/", "twitter": "https://twitter.com/"}';
+    $option->mailer_settings = '{"server":"smtp.example.com", "port":"25", "username":"example@example.com", "password":"password", "sendfrom":"admin@example.com"}';
     $option->app_ui_mode = '0';
     R::store( $option );
 }

@@ -17,15 +17,23 @@
         } elseif (!isset($_POST['app_ui_mode'])) {
             $update->app_ui_mode = 0;
         }
-	    $appScoial = [
-		    'facebook' => $_POST['facebook'],
-		    'twitter' => $_POST['twitter'],
-		    'instagram' => $_POST['instagram'],
-		    'vk' => $_POST['vk'],
-		    'linkedin' => $_POST['linkedin'],
-		    'youtube' => $_POST['youtube'],
-	    ];
+        $appScoial = [
+            'facebook' => $_POST['facebook'],
+            'twitter' => $_POST['twitter'],
+            'instagram' => $_POST['instagram'],
+            'vk' => $_POST['vk'],
+            'linkedin' => $_POST['linkedin'],
+            'youtube' => $_POST['youtube'],
+        ];
         $update->app_social = json_encode($appScoial,JSON_UNESCAPED_SLASHES);
+        $smtpSettings = [
+            'server' => $_POST['smtp_server'],
+            'port' => $_POST['smtp_port'],
+            'username' => $_POST['smtp_login'],
+            'password' => $_POST['smtp_password'],
+            'sendfrom' => $_POST['smtp_sendfrom'],
+        ];
+        $update->mailer_settings = json_encode($smtpSettings,JSON_UNESCAPED_SLASHES);
         R::store($update);
         echo '<meta http-equiv="refresh" content="0; URL=/manager/index.php?page=settings&result=updated">';
     }
@@ -64,10 +72,10 @@
         <div class="col-md-12">
             <h1 class="pageTitle"><?php echo get_translate('General Settings', 'Главные Настройки'); ?></h1>
         </div>
-        <div class="col-md-6 col-card">
-            <div class="newsSection card">
-                <div class="queryTable table">
-                    <form id="settings_form" class="settings_form" action="" method="post">
+        <form id="settings_form" class="settings_form" action="" method="post">
+            <div class="col-md-6 col-card">
+                <div class="newsSection card">
+                    <div class="queryTable table">
                         <table class="table generalSettingsTable">
                             <tbody>
                                 <tr>
@@ -108,7 +116,7 @@
                                     </td>
                                     <td>
                                         <button type="button" class="button changeLabelLogo" name="button" href="javascript:;">
-			                                <?php echo get_translate('Change', 'Изменить'); ?>
+                                            <?php echo get_translate('Change', 'Изменить'); ?>
                                         </button>
                                         <span class="labelLogoUrl"><?php echo base_url('view/uploads/label/' . get_option('site_logo_url')); ?></span>
                                     </td>
@@ -119,7 +127,7 @@
                                     </td>
                                     <td>
                                         <button type="button" class="button changeLabelbanner" name="button" href="javascript:;">
-			                                <?php echo get_translate('Change', 'Изменить'); ?>
+                                            <?php echo get_translate('Change', 'Изменить'); ?>
                                         </button>
                                         <span class="labelLogoUrl"><?php echo base_url('view/uploads/label/' . get_option('label_banner')); ?></span>
                                     </td>
@@ -209,28 +217,28 @@
                                         <strong><?php echo get_translate('Enable Dark Mode', 'Включить Темный Режим'); ?></strong>
                                     </td>
                                     <td>
-		                                <?php
-			                                if (get_option('app_ui_mode')) {
-				                                echo '<div class="pretty pretty p-switch p-fill">
+                                        <?php
+                                            if (get_option('app_ui_mode')) {
+                                                echo '<div class="pretty pretty p-switch p-fill">
                                                         <input type="checkbox" name="app_ui_mode" checked />
                                                         <div class="state p-success">
                                                             <label></label>
                                                         </div>
                                                     </div>';
-			                                } else {
-				                                echo '<div class="pretty pretty p-switch p-fill">
+                                            } else {
+                                                echo '<div class="pretty pretty p-switch p-fill">
                                                         <input type="checkbox" name="app_ui_mode" />
                                                         <div class="state p-success">
                                                             <label></label>
                                                         </div>
                                                     </div>';
-			                                }
-		                                ?>
+                                            }
+                                        ?>
                                     </td>
                                 </tr>
                                 <?php
-	                                $appSocials = get_option('app_social');
-	                                $appSocial = json_decode($appSocials);
+                                    $appSocials = get_option('app_social');
+                                    $appSocial = json_decode($appSocials);
                                 ?>
                                 <tr>
                                     <td>
@@ -297,9 +305,73 @@
                         <div class="tableSubmit">
                             <button type="submit" class="button" name="submit"><?php echo get_translate('Save', 'Сохранить'); ?></button>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="col-md-6">
+                <div class="newsSection card">
+                    <div class="queryTable table">
+                        <table class="table generalSettingsTable">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h2><?php echo get_translate('SMTP Settings', 'Настройки SMTP'); ?></h2>
+                                        <span><?php echo get_translate('Setup your SMTP settings for sending campaigns.', 'Настройте параметры SMTP для отправки кампаний.'); ?></span>
+                                    </td>
+                                    <td></td>
+                                    <?php
+                                        $stmpSettings = get_option('mailer_settings');
+                                        $stmpSetting = json_decode($stmpSettings);
+                                    ?>
+                                    <td>
+                                        <strong><?php echo get_translate('SMTP Server', 'SMTP Сервер'); ?></strong>
+                                    </td>
+                                    <td>
+                                        <p class="formControl">
+                                            <input type="text" name="smtp_server" value="<?php echo $stmpSetting->{'server'}; ?>">
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <strong><?php echo get_translate('Port', 'Порт'); ?></strong>
+                                    </td>
+                                    <td>
+                                        <p class="formControl">
+                                            <input type="text" name="smtp_port" value="<?php echo $stmpSetting->{'port'}; ?>">
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <strong><?php echo get_translate('Login', 'Логин'); ?></strong>
+                                    </td>
+                                    <td>
+                                        <p class="formControl">
+                                            <input type="text" name="smtp_login" value="<?php echo $stmpSetting->{'username'}; ?>">
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <strong><?php echo get_translate('Password', 'Пароль'); ?></strong>
+                                    </td>
+                                    <td>
+                                        <p class="formControl">
+                                            <input type="password" name="smtp_password" value="<?php echo $stmpSetting->{'password'}; ?>">
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <strong><?php echo get_translate('Sender Address', 'Адрес Отправителя'); ?></strong>
+                                    </td>
+                                    <td>
+                                        <p class="formControl">
+                                            <input type="text" name="smtp_sendfrom" value="<?php echo $stmpSetting->{'sendfrom'}; ?>">
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="tableSubmit">
+                            <button type="submit" class="button" name="submit"><?php echo get_translate('Save', 'Сохранить'); ?></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </div>

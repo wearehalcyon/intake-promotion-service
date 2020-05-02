@@ -26,8 +26,14 @@ $get = $_GET;
 
 require('header.php');
 // Type Campaign
-if ( $get['type'] == 'campaign' ) {
+if ( $get['type'] == 'campaign' && !$get['preparation'] ) {
     require('actions/campaign-edit.php');
+}
+if ( $get['preparation'] == 'send' ) {
+    require('actions/campaign-send.php');
+}
+if ( $get['preparation'] == 'send_campaign' ) {
+    require('actions/campaign-dispatch.php');
 }
 require('footer.php');
 ?>

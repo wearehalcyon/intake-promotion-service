@@ -3,6 +3,26 @@
 
 	$themeFolder = R::findOne('promos', 'id = ?', [get_page()->id]);
 
+    /**
+     * Autologin
+     */
+    if ( $_GET['usrk'] ) {
+        $artist = R::findOne( 'artists', 'artist_secret_key = ?', array( $_GET['usrk'] ) );
+        $lastLogin = date('M-d-Y / H:i:s');
+        $userID = $artist->id;
+        $userIP = $_SERVER['REMOTE_ADDR'];
+        $artist->artist_last_login = $lastLogin;
+        $artist->artist_ip = $userIP;
+        R::store($artist);
+
+
+        if ( $_GET['usrk'] == $artist->artist_secret_key ) {
+            $_SESSION['logged_user'] = $artist;
+            header('Location: /promo/index.php?campaign=' . $_GET['campaign'] . '&unique=' . $_GET['unique']);
+            exit;
+        }
+    }
+
 	/**
 	 * Front Checking
 	 */

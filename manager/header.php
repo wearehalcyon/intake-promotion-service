@@ -97,10 +97,10 @@
                                             <span><?php echo get_translate('Create New Campaign', 'Создание Новой Кампании'); ?></span>
                                         </li>
 	                                <?php endif; ?>
-	                                <?php if ( $_GET['action'] == 'edit' ) : ?>
+                                    <?php if ( $_GET['action'] == 'edit' && !$_GET['preparation'] ) : ?>
                                         <li>
                                             <a href="<?php echo base_url('manager/index.php?page=promos'); ?>">
-				                                <?php echo get_translate('Promos', 'Промо Кампании'); ?>
+                                                <?php echo get_translate('Promos', 'Промо Кампании'); ?>
                                             </a>
                                         </li>
                                         <li>
@@ -109,7 +109,45 @@
                                         <li>
                                             <span><?php echo get_translate('Edit Campaign', 'Изменить Кампанию'); ?></span>
                                         </li>
-	                                <?php endif; ?>
+                                    <?php endif; ?>
+                                    <?php if ( $_GET['preparation'] ) : ?>
+                                        <li>
+                                            <a href="<?php echo base_url('manager/index.php?page=promos'); ?>">
+                                                <?php echo get_translate('Promos', 'Промо Кампании'); ?>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span>/</span>
+                                        </li>
+                                        <li>
+                                            <a href="<?php echo base_url('manager/edit.php?type=campaign&campaign_id=' . $_GET['campaign_id'] . '&action=edit'); ?>" style="margin-left: 3px;">
+                                                <?php echo get_translate('Edit Campaign', 'Изменить Кампанию'); ?>
+                                            </a>
+                                        </li>
+                                        <?php if ($_GET['preparation'] != 'send_campaign') : ?>
+                                            <li>
+                                                <span>/</span>
+                                            </li>
+                                            <li>
+                                                <span><?php echo get_translate('Send Campaign', 'Разослать Кампанию'); ?></span>
+                                            </li>
+                                        <?php else : ?>
+                                            <li>
+                                                <span>/</span>
+                                            </li>
+                                            <li>
+                                                <a href="<?php echo base_url('manager/edit.php?type=campaign&campaign_id=' . $_GET['campaign_id'] . '&action=edit&preparation=send'); ?>" style="margin-left: 3px;">
+                                                    <?php echo get_translate('Send Campaign', 'Разослать Кампанию'); ?>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span>/</span>
+                                            </li>
+                                            <li>
+                                                <span><?php echo get_translate('Submission', 'Отправка'); ?></span>
+                                            </li>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
                                 </ul>
                             </div>
                         </div>

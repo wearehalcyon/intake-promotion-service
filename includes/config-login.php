@@ -10,7 +10,6 @@
         $userIP = $_SERVER['REMOTE_ADDR'];
         $artist->artist_last_login = $lastLogin;
         $artist->artist_ip = $userIP;
-        //R::exec( "update artists set artist_ip=? where id=?", [$userIP, $userID] );
         R::store($artist);
 
         //var_dump($artist);
@@ -31,7 +30,7 @@
         header('location: /manager/');
         exit;
     } elseif ( $userRole == 'artist' ) {
-        header('location: /artist/');
+        header('location: /');
         exit;
     }
 ?>
