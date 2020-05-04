@@ -1,5 +1,5 @@
 <?php
-    require_once '../lib/swiftmailer/autoload.php';
+    
 
     // Artists list
     $artists = R::findAll('artists');

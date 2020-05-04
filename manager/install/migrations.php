@@ -71,5 +71,6 @@ if ($review && R::count('reviews') < 1) {
     $review->reviewer_track_comment = 'Wow! This is amazing. Will support this on my radioshow!';
     $review->reviewer_ip = '127.0.0.1';
     $review->reviewer_time = date('M-d-Y / H:i:s');
+    $review->reviewer_logged_in = 0;
     R::store( $review );
 }

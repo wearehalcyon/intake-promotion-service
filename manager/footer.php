@@ -52,17 +52,32 @@
 </div>
 </div>
 <script src="<?php echo get_assets('jquery/3.4.1/jquery.min', 'script'); ?>"></script>
+<script src="<?php echo get_assets('canvas', 'script'); ?>"></script>
 <script src="<?php echo get_assets('nice-select', 'script'); ?>"></script>
 <script src="<?php echo get_assets('dropzone', 'script'); ?>"></script>
 <script src="<?php echo get_assets('fancybox.min', 'script'); ?>"></script>
 <script src="<?php echo base_url('lib/tinymce/tinymce.min.js'); ?>"></script>
 <script src="<?php echo base_url('lib/flat-datepicker/datepicker.js'); ?>"></script>
-<?php debug_bar(); ?>
-<script src="<?php echo get_assets('wavesurfer', 'script'); ?>"></script>
+<?php if ($_GET['type'] == 'campaign' && $_GET['action'] == 'edit') : ?>
+    <script src="<?php echo get_assets('wavesurfer', 'script'); ?>"></script>
+    <?php if (get_option('app_ui_mode')) : ?>
+        <script src="<?php echo get_assets('wavesurfer-player-dark', 'script'); ?>"></script>
+    <?php else : ?>
+        <script src="<?php echo get_assets('wavesurfer-player', 'script'); ?>"></script>
+    <?php endif; ?>
+<?php endif; ?>
+<?php if ($_GET['type'] == 'statistic' && $_GET['action'] == 'view') : ?>
+    <?php if (get_option('app_ui_mode')) : ?>
+        <script src="<?php echo get_assets('charts-dark', 'script'); ?>"></script>
+    <?php else : ?>
+        <script src="<?php echo get_assets('charts', 'script'); ?>"></script>
+    <?php endif; ?>
+<?php endif; ?>
 <?php if (get_option('app_ui_mode')) : ?>
     <script src="<?php echo get_assets('manager-dark', 'script'); ?>"></script>
 <?php else : ?>
     <script src="<?php echo get_assets('manager', 'script'); ?>"></script>
 <?php endif; ?>
+<?php debug_bar(); ?>
 </body>
 </html>

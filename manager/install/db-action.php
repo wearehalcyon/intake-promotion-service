@@ -28,7 +28,7 @@
      * Redbean Library required
      * Redbean version 5.5 Beta 2
      */
-    require(\'lib/redbean.php\');
+    require(\'lib/redbean/orm.php\');
 
     /**
      * Connection to Database variables

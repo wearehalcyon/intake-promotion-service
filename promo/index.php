@@ -13,7 +13,10 @@
         $userIP = $_SERVER['REMOTE_ADDR'];
         $artist->artist_last_login = $lastLogin;
         $artist->artist_ip = $userIP;
+        $reviews = R::findOne('reviews', 'reviewer_id = ?', [$userID]);
+        $reviews->reviewer_logged_in = $reviews->reviewer_logged_in + 1;
         R::store($artist);
+        R::store($reviews);
 
 
         if ( $_GET['usrk'] == $artist->artist_secret_key ) {

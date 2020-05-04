@@ -44,6 +44,10 @@
         if ( $get['page'] == 'artists' ) {
             require('partials/page-artists.php');
         }
+        // Statistice
+        if ( $get['page'] == 'statistics' ) {
+            require('partials/page-statistics.php');
+        }
         // Media Library
         if ( $get['page'] == 'media-library' ) {
             require('partials/page-media-library.php');
@@ -59,6 +63,10 @@
         // Activation
         if ( $get['page'] == 'activation' ) {
             require('partials/page-activation.php');
+        }
+        // Help
+        if ( $get['page'] == 'help' ) {
+            require('partials/page-help.php');
         }
         // About App
         if ( $get['page'] == 'about' ) {

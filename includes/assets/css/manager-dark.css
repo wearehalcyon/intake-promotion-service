@@ -1584,6 +1584,86 @@ p.choosedTemplate{
     text-align: center;
 }
 
+h1 span.stats{
+    color: #ff7600;
+}
+
+.statsCover{
+    display: block;
+    position: relative;
+}
+
+.statsCover img{
+    width: 100%;
+    height: auto;
+}
+
+.chart{
+    display: block;
+    position: relative;
+}
+
+.chart h3{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.chart p{
+    display: block;
+    text-align: center;
+}
+
+.tracksRating td.ratenum{
+    font-weight: 700;
+    color: #00d6ff;
+}
+
+p.avrate{
+    font-size: 20px;
+    font-weight: 700;
+    color: #00d6ff;
+}
+
+.campaignFeedList{
+    display: block;
+    margin-top: 60px;
+}
+
+.campaignFeedList h2{
+    font-size: 22px;
+    text-align: center;
+}
+
+table.feedListable tbody tr:nth-child(2n){
+    background-color: rgba(0,214,255, .03);
+}
+
+form.generate_pdf_form{
+    margin-top: 20px;
+}
+
+p.activationTitle{
+    display: inline-block;
+    position: relative;
+}
+
+p.currVerTxt{
+    display: block;
+    margin-top: 10px;
+}
+
+p.currVerTxt a{
+    color: #00bd80;
+    font-weight: 700;
+}
+
+p.currVerTxt a:hover{
+    text-decoration: underline;
+}
+
+
 
 
 

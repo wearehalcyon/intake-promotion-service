@@ -1,12 +1,44 @@
 <?php
-// Mem usage
+    // Mem usage
 	$mem_start = memory_get_usage();
+
+    /**
+     * Enable SwiftMailer
+     */
+    require_once '../lib/swiftmailer/autoload.php';
+
+    /**
+     * Connect To Server
+     */
+    ob_start();
+    readfile('https://api.artroman.net/clients/demo/localhost.json');
+        $get_server = ob_get_contents();
+    ob_clean();
+    $server_key = json_decode($get_server);
 
 	/**
 	 * Get Version
 	 */
-	function get_version(){
-		return '1.0.1';
+	function get_version($version = null){
+        ob_start();
+        readfile('https://api.artroman.net/clients/demo/checkver.json');
+            $content = ob_get_contents();
+        ob_clean();
+        $ver = json_decode($content);
+        $thisver = '1.0.9';
+        if ($version == 'current') {
+            return $thisver;
+        }
+        if ($version == 'update') {
+            return $ver->{'version'};
+        }
+        if ($version == null) {
+            if ($ver->{'version'} != $thisver && $ver->{'version'} > $thisver) {
+                return get_translate($thisver . '. Available update: ' . $ver->{'version'});
+            } else {
+                return $thisver;
+            }
+        }
 	}
 
 	/**
@@ -37,6 +69,22 @@
 	}
 	$json = api_connect();
 	$api = json_decode($json);
+
+    if (isset($_POST['submit_license'])) {
+        $update = R::findOne('options', 'id=?', [1]);
+        $update->api_key = $_POST['apikey'];
+        $update->serial_number = $_POST['serialnum'];
+        R::store($update);
+        echo '<meta http-equiv="refresh" content="0; URL=/manager/index.php?page=activation">';
+    }
+
+    if ($api->{'api_key'} == get_option('api_key') && $api->{'serial_number'} == get_option('serial_number')) {
+        $apikey_message = get_translate('Activated', 'Активировано');
+        $apil_class = ' registered';
+    } else {
+        $apikey_message = get_translate('Unactivated', 'Не Активировано');
+        $apil_class = get_translate(' unregistered', ' unregistered unregistered_ru');
+    }
 
 	/**
 	 * Site General Options
@@ -266,3 +314,106 @@
 		$user = $_SESSION['logged_user'];
 		return $user;
 	}
+
+	/**
+     * Get Artist By ID
+     */
+	function get_artist_by($id = null, $value = null){
+	    $artist = R::findOne('artists', 'id = ?', [$id]);
+	    return $artist['artist_' . $value];
+    }
+
+	/**
+	 * Stats Card
+	 */
+	 function get_stats_card(){
+		 $campaignID = $_GET['campaign'];
+	     $campaign = R::findOne('promos', 'id = ?', [$campaignID]);
+	     $views = R::count('reviews', 'promo_id = ? && reviewer_logged_in != ?', [$campaignID, 0]);
+	     $artistlist = R::count('artists');
+	     $total_views = R::findAll('reviews', 'promo_id = ? && reviewer_logged_in != ?', [$campaignID, 0]);
+	     $total_sum = 0;
+	     foreach($total_views as $total_view) {
+	         $total_sum += $total_view->reviewer_logged_in;
+	     }
+		 // Stats Card
+	     ob_start();
+	         require_once('../manager/actions/campaign-statistics-card.php');
+	         $stats_card = ob_get_contents();
+	     ob_end_clean();
+		 return $stats_card;
+	 }
+
+	 /**
+ 	 * Stats Card Download
+ 	 */
+ 	 function get_stats_card_download(){
+ 		 $campaignID = $_GET['campaign'];
+ 	     $campaign = R::findOne('promos', 'id = ?', [$campaignID]);
+ 	     $views = R::count('reviews', 'promo_id = ? && reviewer_logged_in != ?', [$campaignID, 0]);
+ 	     $artistlist = R::count('artists');
+ 	     $total_views = R::findAll('reviews', 'promo_id = ? && reviewer_logged_in != ?', [$campaignID, 0]);
+ 	     $total_sum = 0;
+ 	     foreach($total_views as $total_view) {
+ 	         $total_sum += $total_view->reviewer_logged_in;
+ 	     }
+ 		 // Stats Card
+ 	     ob_start();
+ 	         require_once('../manager/actions/campaign-statistics-card-table.php');
+ 	         $stats_card = ob_get_contents();
+ 	     ob_end_clean();
+ 		 return $stats_card;
+ 	 }
+
+ 	 /**
+      * Help Form
+      */
+     $stmpSettings = get_option('mailer_settings');
+     $stmpSetting = json_decode($stmpSettings);
+
+     $transport = (new Swift_SmtpTransport($stmpSetting->{'server'}, $stmpSetting->{'port'}))
+        ->setUsername($stmpSetting->{'username'})
+        ->setPassword($stmpSetting->{'password'})
+     ;
+
+     // Create the Mailer using your created Transport
+     $help_mailer = new Swift_Mailer($transport);
+
+     $clientEmail = $_POST['help_client_email'];
+     $clientAPI = $_POST['help_client_api_key'];
+     $clientSerial = $_POST['help_client_serial'];
+     $clientTicket = str_replace('Ticket Number: #', '', $_POST['help_client_ticket_number']);
+     $clientSubject = $_POST['help_client_subject'];
+     $clientMessage = $_POST['help_client_message'];
+     $help_message_body = "
+        <strong>Client Email:</strong> $clientEmail
+        <br>
+        <strong>Client API Key:</strong> $clientAPI
+        <br>
+        <strong>Client Serial Number:</strong> $clientSerial
+        <br>
+        <strong>Client Ticket Number:</strong> $clientTicket
+        <br>
+        <i>$clientMessage</i>
+     ";
+
+     // Create a message
+     $help_message = (new Swift_Message('INTAKE Support Request: ' . $_POST['help_client_subject']))
+        ->setFrom([$stmpSetting->{'sendfrom'} => get_option('site_name')])
+        ->setTo($server_key->{'intake_email'})
+        ->setBody($help_message_body, 'text/html')
+     ;
+
+ 	 if (
+         isset($_POST['help_client_email']) &&
+         isset($_POST['help_client_api_key']) &&
+         isset($_POST['help_client_serial']) &&
+         isset($_POST['help_client_ticket_number']) &&
+         isset($_POST['help_client_subject']) &&
+         isset($_POST['help_client_message']) &&
+         isset($_POST['help_client_submit'])
+     ) {
+ 	     $result = $help_mailer->send($help_message);
+         header('Location: /manager/index.php?page=help&result=success&ticket=' . str_replace('Ticket Number: #', '', $clientTicket));
+         exit;
+     }
