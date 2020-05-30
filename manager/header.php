@@ -7,6 +7,7 @@
         <meta charset="utf-8">
         <title><?php echo get_translate('Manager Dashboard', 'Панель Управления'); ?> | <?php echo get_dashboard_page() . get_option('site_name'); ?></title>
         <link rel="stylesheet" href="<?php echo get_assets('bootstrap', 'style'); ?>">
+        <link rel="stylesheet" href="<?php echo get_assets('ui.min', 'style'); ?>">
         <link rel="stylesheet" href="<?php echo get_assets('font-awesome', 'style'); ?>">
         <link rel="stylesheet" href="<?php echo get_assets('nice-select', 'style'); ?>">
         <link rel="stylesheet" href="<?php echo get_assets('pretty-checkbox', 'style'); ?>">
@@ -53,7 +54,7 @@
                                                 <a href="<?php echo base_url('manager/index.php?page=account-settings'); ?>"><?php echo get_translate('Settings', 'Настройки'); ?></a>
                                             </li>
                                             <li>
-                                                <a href="<?php echo base_url('/logout.php'); ?>"><?php echo get_translate('Logout', 'Выйти'); ?></a>
+                                                <a href="<?php echo base_url('logout.php'); ?>"><?php echo get_translate('Logout', 'Выйти'); ?></a>
                                             </li>
                                         </ul>
                                     </div>

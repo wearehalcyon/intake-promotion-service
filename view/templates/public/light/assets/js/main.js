@@ -27,13 +27,20 @@
             waveColor: '#8b939c',
             progressColor: '#00b39a',
             backend: 'MediaElement',
+            mediaType:'audio',
             backgroundColor: 'transparent',
             barGap: 2.5,
             barHeight: 1,
             barMinHeight: 1,
             barRadius: 1,
             barWidth: 1.2,
-            height: 60
+            height: 60,
+            partialRender: false,
+            pixelRatio: 1,
+            responsive: true,
+            splitChannels: false,
+            normalize: true,
+            cursorColor: '#00b39a',
         };
 
         wavesurfer[i] = WaveSurfer.create(options);
@@ -48,6 +55,11 @@
                 wavesurfer[i].playPause();
             }, false);
             $('#wavesurfer-container-' + i + ' .loadingTrack').fadeOut(500);
+        });
+
+        wavesurfer[i].on('loading', function (percents) {
+            document.getElementById('progress-' + i).value = percents;
+            $('.progress_pecents-' + i).text(percents + '%');
         });
 
         if ($('ul.player li').hasClass('active') != true) {
@@ -89,6 +101,19 @@
         });
     });
 
+    // Listen player
+    $('.playBtn button').on('click', function(){
+        $('input[name="listenplayer"]').attr('value', 1);
+    });
 
+    // Download Track
+    $('a.downloadTrack').on('click', function(){
+        $('input[name="downloadtrack"]').attr('value', 1);
+    });
+
+    // Download ZIP
+    $('a.downloadArchive').on('click', function(){
+        $('input[name="downloadzip"]').attr('value', 1);
+    });
 
 })(jQuery);

@@ -278,6 +278,32 @@ ul.player li.waveform.active{
     width: calc(100% - 60px);
     border-left: 1px solid #8b939c;
 }
+.wavesurfer-player wave wave{
+    background-color: rgba(0,179,154,0.2);
+}
+
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 70%;
+    height: 6px;
+    border-radius: 100px;
+    margin: 0;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #ccc;
+}
+
+progress[value]::-webkit-progress-value{
+    background-color: #00b39a;
+}
+
+span.progress_percents{
+    margin-right: 5px;
+    font-size: 11px;
+    font-weight: 400;
+}
 
 .trackItems{
     display: block;
@@ -333,7 +359,7 @@ ul.trackItems li span{
     display: none;
     position: absolute;
     top: 6px;
-    right: 10px;
+    right: 40px;
     color: #00b39a;
     font-size: 14px;
     font-weight: 600;
@@ -572,6 +598,14 @@ p.alreadySubmited{
     font-weight: 600;
     font-size: 14px;
     font-style: italic;
+}
+
+.downloadTrack{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 9999;
 }
 
 @media (max-width: 992px){

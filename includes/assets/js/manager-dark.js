@@ -99,7 +99,7 @@
 
     // Init TinyMCE
     tinymce.init({
-        selector:'textarea',
+        selector:'.newCampaignCard textarea',
         height: 300
     });
 
@@ -173,6 +173,43 @@
                 $(this).remove();
             },
         });
+    });
+
+    // Terminal
+    $('.terminal').draggable();
+    document.onkeydown = function(e) {
+        var keycode = 192;
+        if (e.which == keycode) {
+            $('.terminal').toggleClass('active');
+        }
+    };
+    $('span.close_terminal').click(function(){
+        $('.terminal').removeClass('active');
+    });
+
+    var get_terminal_cmd = $('.terminalCMDs p textarea').val();
+    if ( get_terminal_cmd == 'exit' ){
+        $('.terminal').removeClass('active');
+    }
+
+    /**
+     * Mobile menu button
+     */
+    $('.mobileNavButton button').click(function(){
+        $(this).toggleClass('active');
+        $('.sidebarNav').toggleClass('active');
+    });
+
+    /**
+     * Artists List Filter
+     */
+    $('select.artists_filter').on('change', function(){
+        //alert('Changed to' + $(this).val());
+        if ( $(this).val() == 'list_all' ) {
+            window.location.href = '/manager/index.php?page=artists';
+        } else {
+            window.location.href = '/manager/index.php?page=artists&list=' + $(this).val();
+        }
     });
 
 })(jQuery);

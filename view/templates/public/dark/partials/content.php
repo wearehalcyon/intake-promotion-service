@@ -139,6 +139,9 @@ foreach ($sendFeedbacks as $sendFeedback) {
                                 $playerID = 0;
                                 $containerID = 1;
                                 $btnID = 1;
+                                $progressbar = 0;
+                                $data_progressbar = 0;
+                                $class_progressbar = 0;
                                 foreach ( $tracks as $track ) {
                                     ?>
                                     <li class="waveform" data-player-id="<?php echo $playerID++ ?>">
@@ -149,7 +152,9 @@ foreach ($sendFeedbacks as $sendFeedback) {
                                         </div>
                                         <div id="wavesurfer-container" class="wavesurfer-player" data-src="<?php echo base_url('view/uploads/promos/preview/' . str_replace(' ', '-', $track->source)); ?>">
                                             <div class="loadingTrack">
-                                                <img src="<?php echo base_url('view/templates/public/dark/assets/images/trackLoading.svg'); ?>" alt="">
+                                                <span class="progress_percents progress_pecents-<?php echo $class_progressbar++; ?>">0%</span>
+                                                <progress id="progress-<?php echo $progressbar++; ?>" class="progress progress-striped" value="0" max="100"></progress>
+<!--                                                <img src="--><?php //echo base_url('view/templates/public/dark/assets/images/trackLoading.svg'); ?><!--" alt="">-->
                                             </div>
                                         </div>
                                     </li>
@@ -163,7 +168,8 @@ foreach ($sendFeedbacks as $sendFeedback) {
                                     ?>
                                     <li>
                                         <span><i class="fas fa-headphones-alt"></i></span>
-                                        <a href="javascript:;" data-track-id="<?php echo $trackID++; ?>" data-track-url="<?php echo base_url('view/uploads/promos/preview/' . str_replace(' ', '-', $track->source)); ?>"><?php echo $trackNum++ . '. ' .  $track->source; ?></a>
+                                        <a href="javascript:;" data-track-id="<?php echo $trackID++; ?>" data-track-url="<?php echo base_url('view/uploads/promos/preview/' . str_replace(' ', '-', $track->source)); ?>"><?php echo $trackNum++ . '. ' .  $track->artist . ' - ' . $track->title . ' (' . $track->description . ')'; ?></a>
+                                        <div class="downloadTrack"><a class="downloadTrack" href="<?php echo base_url('view/uploads/promos/preview/' . str_replace(' ', '-', $track->source)); ?>" download><i class="fas fa-download"></i></a></div>
                                     </li>
                                 <?php } ?>
                             </ul>
@@ -174,6 +180,9 @@ foreach ($sendFeedbacks as $sendFeedback) {
                                 <form action="" method="post" class="feedbackFormFlex">
                                     <div class="formControl">
                                         <input type="hidden" name="artistid" value="<?php echo get_user()->id; ?>">
+                                        <input type="hidden" name="listenplayer" value="">
+                                        <input type="hidden" name="downloadtrack" value="">
+                                        <input type="hidden" name="downloadzip" value="">
                                     </div>
                                     <div class="formControl half-7 choose">
                                         <span class="formControlTitle">Choose best track:</span>

@@ -35,7 +35,7 @@ if ($artist && R::count('artists') < 1) {
     $artist->artist_last_login = date('M-d-Y / H:i:s');
     $artist->artist_ip = NULL;
     $artist->artist_secret_key = (md5('Administrator') . md5(time()));
-    $artist->artist_photo = 'john-doe.jpg';
+    $artist->artist_group = 'list_dev';
     R::store( $artist );
 }
 
@@ -72,5 +72,8 @@ if ($review && R::count('reviews') < 1) {
     $review->reviewer_ip = '127.0.0.1';
     $review->reviewer_time = date('M-d-Y / H:i:s');
     $review->reviewer_logged_in = 0;
+    $review->promo_track_listened = 0;
+    $review->promo_download_zip = 0;
+    $review->promo_download_track = 0;
     R::store( $review );
 }

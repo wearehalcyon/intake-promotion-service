@@ -78,18 +78,74 @@
                 </thead>
                 <tbody>
                 <?php
-                $feedID = 1;
-                foreach($total_views as $total_view) {
-                    ?>
-                    <tr>
-                        <td><?php echo $feedID++; ?></td>
-                        <td><?php echo get_artist_by($total_view->reviewer_id, 'alias'); ?></td>
-                        <td><?php echo $total_view->reviewer_track_comment; ?></td>
-                        <td class="text-center"><?php echo $total_view->reviewer_track_rate; ?></td>
-                        <td class="text-center"><?php echo $total_view->reviewer_track_support; ?></td>
-                    </tr>
-                    <?php
-                }
+                    $feedID = 1;
+                    foreach($total_views as $total_view) {
+                        ?>
+                        <tr>
+                            <td><?php echo $feedID++; ?></td>
+                            <td><?php echo get_artist_by($total_view->reviewer_id, 'alias'); ?></td>
+                            <td><?php echo $total_view->reviewer_track_comment; ?></td>
+                            <td class="text-center"><?php echo $total_view->reviewer_track_rate; ?></td>
+                            <td class="text-center"><?php echo $total_view->reviewer_track_support; ?></td>
+                        </tr>
+                        <?php
+                    }
+                ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="campaignFeedList">
+            <h2><?php echo get_translate('Download And Listening Activity', 'Активность Загрузок и Прослушивания'); ?></h2>
+            <table class="table users-artists-table feedListable">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th><?php echo get_translate('Artist', 'Артист'); ?></th>
+                    <th class="text-center"><?php echo get_translate('Track Listened', 'Трек Прослушан'); ?></th>
+                    <th class="text-center"><?php echo get_translate('Track Download', 'Скачивание Трека'); ?></th>
+                    <th class="text-center"><?php echo get_translate('ZIP Download', 'Скачивание ZIP'); ?></th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                    $feedID = 1;
+                    foreach($total_views as $total_view) {
+                        ?>
+                        <tr>
+                            <td><?php echo $feedID++; ?></td>
+                            <td><?php echo get_artist_by($total_view->reviewer_id, 'alias'); ?></td>
+                            <td class="text-center">
+                                <?php
+                                    if ($total_view->promo_track_listened == 1) {
+                                        echo get_translate('Yes', 'Да');
+                                    } else {
+                                        echo get_translate('No', 'Нет');
+                                    }
+                                ?>
+                            </td>
+                            <td class="text-center">
+                                <?php
+                                    if ($total_view->promo_download_track == 1) {
+                                        echo get_translate('Yes', 'Да');
+                                    } else {
+                                        echo get_translate('No', 'Нет');
+                                    }
+                                ?>
+                            </td>
+                            <td class="text-center">
+                                <?php
+                                    if ($total_view->promo_download_zip == 1) {
+                                        echo get_translate('Yes', 'Да');
+                                    } else {
+                                        echo get_translate('No', 'Нет');
+                                    }
+                                ?>
+                            </td>
+                        </tr>
+                        <?php
+                    }
                 ?>
                 </tbody>
             </table>

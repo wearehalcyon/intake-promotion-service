@@ -3,7 +3,7 @@
 ?>
 <style media="screen">
     *{
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'DejaVu Sans', sans-serif;
         background-color: #fff;
     }
     table{
@@ -19,7 +19,7 @@
     }
     .pdfTitle{
         text-align: center;
-        font-size: 22px;
+        font-size: 18px;
     }
     td.powered{
         text-align: right;
@@ -33,7 +33,7 @@
         text-align: center;
         padding-top: 40px;
         font-weight: 100;
-        font-size: 36px;
+        font-size: 30px;
     }
     .data{
         display: block;
@@ -62,38 +62,33 @@
 <h1 class="statsTitle"><?php echo get_promo('title'); ?></h1>
 <div class="row">
     <div class="col-md-4">
-        <div class="chart chartPrev">
-            <h3 class="pdfTitle">
-                <?php echo get_translate('Views', 'Просмотры'); ?>
-            </h3>
-            <p class="data">
-                <?php echo $views . ' / ' . $artistlist; ?>
-            </p>
-            <canvas id="viewsChartDoughnut" width="9" height="10" data-views="<?php echo $views; ?>" data-all-artists="<?php echo $artistlist; ?>"></canvas>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="chart chartPrev">
-            <h3 class="pdfTitle">
-                <?php echo get_translate('Total Views', 'Все Просмотры'); ?>
-            </h3>
-            <p class="data">
-                <?php echo $total_sum . ' / ' . $views; ?>
-            </p>
-            <canvas id="totalViewsChart" width="9" height="10" data-single-views="<?php echo $views; ?>" data-total-views="<?php echo $total_sum; ?>"></canvas>
-        </div>
+        <h3 class="pdfTitle">
+            <?php echo get_translate('Views', 'Просмотры'); ?>
+        </h3>
+        <table class="table users-artists-table tracksRating" cellspacing="0" cellpadding="0" style="margin: 0;">
+            <thead>
+            <tr>
+                <th style="width:50%;background-color: #efe7dc;text-align: center;"><?php echo get_translate('Views', 'Просмотры'); ?></th>
+                <th style="width:50%;background-color: #efe7dc;text-align: center;"><?php echo get_translate('Total Views', 'Все Просмотры'); ?></th>
+            </tr>
+            </thead>
+            <tr>
+                <td style="width:50%;padding: 5px;border:1px solid #ccc;font-size: 12px;text-align: center;background-color: #e2ecea;" class="ratenum"><?php echo $views . ' / ' . $artistlist; ?></td>
+                <td style="width:50%;padding: 5px;border:1px solid #ccc;font-size: 12px;text-align: center;background-color: #e2ecea;" class="ratenum"><?php echo $total_sum . ' / ' . $views; ?></td>
+            </tr>
+        </table>
     </div>
     <div class="col-md-4">
         <div class="chart chartPrev">
             <h3 class="pdfTitle">
                 <?php echo get_translate('Number Of Track Picks', 'Количество Выборов Трека'); ?>
             </h3>
-            <table class="table users-artists-table tracksRating">
+            <table class="table users-artists-table tracksRating" cellspacing="0" cellpadding="0" style="margin: 0;">
                 <thead>
                 <tr>
-                    <th>#</th>
-                    <th><?php echo get_translate('Track', 'Трек'); ?></th>
-                    <th><?php echo get_translate('Selected', 'Выбран'); ?></th>
+                    <th style="background-color: #efe7dc;text-align: center;">#</th>
+                    <th style="background-color: #efe7dc;"><?php echo get_translate('Track', 'Трек'); ?></th>
+                    <th style="background-color: #efe7dc;text-align: center;"><?php echo get_translate('Selected', 'Выбран'); ?></th>
                 </tr>
                 </thead>
                 <?php
@@ -102,9 +97,9 @@
                 foreach ( $tracksratings as $tracksrating ) {
                     ?>
                     <tr>
-                        <td><?php echo $da++; ?></td>
-                        <td><?php echo $tracksrating['reviewer_track_choosed']; ?></td>
-                        <td class="ratenum"><?php echo $tracksrating['rating']; ?></td>
+                        <td style="padding: 5px;border:1px solid #ccc;font-size: 12px;text-align: center;background-color: #e2ecea;"><?php echo $da++; ?></td>
+                        <td style="padding: 5px;border:1px solid #ccc;font-size: 12px;background-color: #e2ecea;"><?php echo $tracksrating['reviewer_track_choosed']; ?></td>
+                        <td style="padding: 5px;border:1px solid #ccc;font-size: 12px;text-align: center;background-color: #e2ecea;" class="ratenum"><?php echo $tracksrating['rating']; ?></td>
                     </tr>
                     <?php
                 }
@@ -116,42 +111,106 @@
                 <?php echo get_translate('Average Rating', 'Средний Рейтинг'); ?>
             </h3>
             <?php
-            $avrate = 0;
-            foreach($total_views as $total_view) {
-                $avrate += $total_view->reviewer_track_rate;
-            }
-            echo '<p class="avrate data">' . round($avrate / $views, 1) . ' / 10</p>';
+                $avrate = 0;
+                foreach($total_views as $total_view) {
+                    $avrate += $total_view->reviewer_track_rate;
+                }
             ?>
-            <canvas id="avrate" width="30" height="10" data-averge="<?php echo round($avrate / $views, 1); ?>"></canvas>
+            <table class="table users-artists-table tracksRating" cellspacing="0" cellpadding="0" style="margin: 0;">
+                <thead>
+                    <tr>
+                        <th style="background-color: #efe7dc;text-align: center;"><?php echo get_translate('Points', 'Очки'); ?></th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td style="padding: 5px;border:1px solid #ccc;font-size: 14px;text-align: center;background-color: #e2ecea;"><?php echo round($avrate / $views, 1) . ' / 10'; ?></td>
+                </tr>
+            </table>
         </div>
     </div>
     <div class="col-md-12">
         <div class="campaignFeedList">
-            <h2><?php echo get_translate('Campaign Feedback List', 'Список Отзывов Кампании'); ?></h2>
-            <table class="table users-artists-table feedListable">
+            <h3 style="text-align: center;" class="pdfTitle"><?php echo get_translate('Campaign Feedback List', 'Список Отзывов Кампании'); ?></h3>
+            <table class="table users-artists-table feedListable" cellspacing="0" cellpadding="0" style="margin: 0;">
                 <thead>
                 <tr>
-                    <th>#</th>
-                    <th><?php echo get_translate('Artist', 'Артист'); ?></th>
-                    <th><?php echo get_translate('Feedback', 'Фидбек'); ?></th>
-                    <th class="text-center"><?php echo get_translate('Rated', 'Оценил'); ?></th>
-                    <th class="text-center"><?php echo get_translate('Supported', 'Поддержал'); ?></th>
+                    <th style="background-color: #efe7dc;text-align: center;">#</th>
+                    <th style="background-color: #efe7dc;"><?php echo get_translate('Artist', 'Артист'); ?></th>
+                    <th style="background-color: #efe7dc;"><?php echo get_translate('Feedback', 'Фидбек'); ?></th>
+                    <th style="background-color: #efe7dc;text-align: center;"><?php echo get_translate('Rated', 'Оценил'); ?></th>
+                    <th style="background-color: #efe7dc;text-align: center;"><?php echo get_translate('Supported', 'Поддержал'); ?></th>
                 </tr>
                 </thead>
                 <tbody>
                 <?php
-                $feedID = 1;
-                foreach($total_views as $total_view) {
-                    ?>
-                    <tr>
-                        <td><?php echo $feedID++; ?></td>
-                        <td><?php echo get_artist_by($total_view->reviewer_id, 'alias'); ?></td>
-                        <td><?php echo $total_view->reviewer_track_comment; ?></td>
-                        <td class="text-center"><?php echo $total_view->reviewer_track_rate; ?></td>
-                        <td class="text-center"><?php echo $total_view->reviewer_track_support; ?></td>
-                    </tr>
-                    <?php
-                }
+                    $feedID = 1;
+                    foreach($total_views as $total_view) {
+                        ?>
+                        <tr>
+                            <td style="padding: 5px;border:1px solid #ccc;font-size: 12px;text-align: center;background-color: #e2ecea;"><?php echo $feedID++; ?></td>
+                            <td style="padding: 5px;border:1px solid #ccc;font-size: 12px;font-weight:600;background-color: #e2ecea;"><?php echo get_artist_by($total_view->reviewer_id, 'alias'); ?></td>
+                            <td style="padding: 5px;border:1px solid #ccc;font-size: 12px;background-color: #e2ecea;"><?php echo $total_view->reviewer_track_comment; ?></td>
+                            <td style="padding: 5px;border:1px solid #ccc;font-size: 12px;text-align: center;background-color: #e2ecea;"><?php echo $total_view->reviewer_track_rate; ?></td>
+                            <td style="padding: 5px;border:1px solid #ccc;font-size: 12px;text-align: center;background-color: #e2ecea;"><?php echo $total_view->reviewer_track_support; ?></td>
+                        </tr>
+                        <?php
+                    }
+                ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="campaignFeedList">
+            <h3 style="text-align: center;" class="pdfTitle"><?php echo get_translate('Download And Listening Activity', 'Активность Загрузок и Прослушивания'); ?></h3>
+            <table class="table users-artists-table feedListable" cellspacing="0" cellpadding="0" style="margin: 0;">
+                <thead>
+                <tr>
+                    <th style="background-color: #efe7dc;text-align: center;">#</th>
+                    <th style="background-color: #efe7dc;"><?php echo get_translate('Artist', 'Артист'); ?></th>
+                    <th style="background-color: #efe7dc;text-align: center;"><?php echo get_translate('Track Listened', 'Трек Прослушан'); ?></th>
+                    <th style="background-color: #efe7dc;text-align: center;"><?php echo get_translate('Track Download', 'Скачивание Трека'); ?></th>
+                    <th style="background-color: #efe7dc;text-align: center;"><?php echo get_translate('ZIP Download', 'Скачивание ZIP'); ?></th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                    $feedID = 1;
+                    foreach($total_views as $total_view) {
+                        ?>
+                        <tr>
+                            <td style="padding: 5px;border:1px solid #ccc;font-size: 12px;text-align: center;background-color: #e2ecea;"><?php echo $feedID++; ?></td>
+                            <td style="padding: 5px;border:1px solid #ccc;font-size: 12px;font-weight:600;background-color: #e2ecea;"><?php echo get_artist_by($total_view->reviewer_id, 'alias'); ?></td>
+                            <td style="padding: 5px;border:1px solid #ccc;font-size: 12px;text-align: center;background-color: #e2ecea;">
+                                <?php
+                                    if ($total_view->promo_track_listened == 1) {
+                                        echo get_translate('Yes', 'Да');
+                                    } else {
+                                        echo get_translate('No', 'Нет');
+                                    }
+                                ?>
+                            </td>
+                            <td style="padding: 5px;border:1px solid #ccc;font-size: 12px;text-align: center;background-color: #e2ecea;">
+                                <?php
+                                    if ($total_view->promo_download_track == 1) {
+                                        echo get_translate('Yes', 'Да');
+                                    } else {
+                                        echo get_translate('No', 'Нет');
+                                    }
+                                ?>
+                            </td>
+                            <td style="padding: 5px;border:1px solid #ccc;font-size: 12px;text-align: center;background-color: #e2ecea;">
+                                <?php
+                                    if ($total_view->promo_download_zip == 1) {
+                                        echo get_translate('Yes', 'Да');
+                                    } else {
+                                        echo get_translate('No', 'Нет');
+                                    }
+                                ?>
+                            </td>
+                        </tr>
+                        <?php
+                    }
                 ?>
                 </tbody>
             </table>

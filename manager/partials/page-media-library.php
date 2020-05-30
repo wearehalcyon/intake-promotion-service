@@ -7,7 +7,10 @@
             <div class="newsSection card">
                 <div class="cardContent">
                     <ul class="mlList">
-                        <?php get_required_file('/includes/vendor/', 'media-library-explorer.php'); ?>
+                        <?php
+                            get_required_file('/includes/vendor/', 'media-library-explorer.php');
+                            //get_required_file('/includes/vendor/', 'finder.php');
+                        ?>
                     </ul>
                 </div>
             </div>

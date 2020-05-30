@@ -1,5 +1,5 @@
 <?php
-    require_once '../lib/swiftmailer/autoload.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/lib/swiftmailer/autoload.php';
 
     $campaign = R::findOne('promos', 'id = ?', [$_GET['campaign_id']]);
     $userkey = $_SESSION['logged_user']->artist_secret_key;
@@ -39,7 +39,7 @@ EOD;
     $stmpSettings = get_option('mailer_settings');
     $stmpSetting = json_decode($stmpSettings);
 
-    $transport = (new Swift_SmtpTransport($stmpSetting->{'server'}, $stmpSetting->{'port'}))
+    $transport = (new Swift_SmtpTransport('ssl://' . $stmpSetting->{'server'}, $stmpSetting->{'port'}))
         ->setUsername($stmpSetting->{'username'})
         ->setPassword($stmpSetting->{'password'})
     ;
@@ -53,6 +53,12 @@ EOD;
         ->setTo([$reciever => 'A name'])
         ->setBody($template, 'text/html')
     ;
+    
+    $headers = $message->getHeaders();
+    $headers = "\r\n" . "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=utf-8" . "\r\n";
+    $headers .= "Message-ID: <".time()." TheSystem@".$_SERVER['SERVER_NAME'].">\r\n";
+    $headers .= "X-Mailer: PHP v".phpversion()."\r\n";
 
     if (isset($_POST['test_send'])) {
         $result = $mailer->send($message);

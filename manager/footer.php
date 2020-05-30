@@ -50,8 +50,29 @@
 </div>
 </div>
 </div>
+<div class="terminal ui-draggable">
+    <span class="close_terminal"></span>
+    <div class="terminalCMDs">
+        <?php
+            $option = R::findOne('options', 'id = ?', [1]);
+        ?>
+        <p>user:<?php echo $option['site_email']; ?></p>
+        <p>logged as: <?php echo $_SESSION['logged_user']->artist_alias; ?></p>
+        <p>YourIP:<?php echo $_SERVER['REMOTE_ADDR']; ?></p>
+        <p>ServerIP:<?php echo gethostbyname('www.' . str_replace(['/', ':', 'http', 'https'], '', base_url())); ?></p>
+        <p>
+            <textarea name="terminal_cmds"></textarea>
+        </p>
+    </div>
+</div>
+</div>
+<div class="mobileNavButton">
+    <button class="mobileNB">
+        <i class="fas fa-ellipsis-v"></i>
+    </button>
 </div>
 <script src="<?php echo get_assets('jquery/3.4.1/jquery.min', 'script'); ?>"></script>
+<script src="<?php echo get_assets('ui.min', 'script'); ?>"></script>
 <script src="<?php echo get_assets('canvas', 'script'); ?>"></script>
 <script src="<?php echo get_assets('nice-select', 'script'); ?>"></script>
 <script src="<?php echo get_assets('dropzone', 'script'); ?>"></script>

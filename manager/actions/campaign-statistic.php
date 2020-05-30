@@ -21,12 +21,15 @@
 
     // Render the HTML as PDF
     $dompdf->render();
+    
+    error_reporting(0);
 
     if (isset($_POST['generate_pdf'])) {
         header("Content-Type: application/pdf");
         header("Content-Length: ".filesize($filename));
         header('Content-Transfer-Encoding: binary');
         header('Accept-Ranges: bytes');
+        header('Charset: utf-8');
         ob_end_clean();
         $strname = array(' ', '(', ')', '.', ',', ':', '/', '|', '-');
         $dompdf->stream(str_replace($strname, '_', get_promo('title') . '-Statistics') . '.pdf', array('Attachment' => true));

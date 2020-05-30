@@ -597,7 +597,7 @@ class Dompdf
                             if (!$accept) {
                                 //found at least one mediatype, but none of the accepted ones
                                 //Skip this css file.
-                                continue;
+                                break;
                             }
                         }
 
@@ -618,7 +618,7 @@ class Dompdf
                         ($media = $tag->getAttribute("media")) &&
                         !in_array($media, $acceptedmedia)
                     ) {
-                        continue;
+                        break;
                     }
 
                     $css = "";

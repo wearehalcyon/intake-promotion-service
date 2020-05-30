@@ -1,17 +1,20 @@
 <?php
+    // Constants
+    define('DOC_ROOT', $_SERVER['DOCUMENT_ROOT']);
+    
     // Mem usage
 	$mem_start = memory_get_usage();
 
     /**
      * Enable SwiftMailer
      */
-    require_once '../lib/swiftmailer/autoload.php';
+    require_once DOC_ROOT . '/lib/swiftmailer/autoload.php';
 
     /**
      * Connect To Server
      */
     ob_start();
-    readfile('https://api.artroman.net/clients/demo/localhost.json');
+    readfile('https://api.intakedigital.com/clients/id/activation.json');
         $get_server = ob_get_contents();
     ob_clean();
     $server_key = json_decode($get_server);
@@ -21,7 +24,7 @@
 	 */
 	function get_version($version = null){
         ob_start();
-        readfile('https://api.artroman.net/clients/demo/checkver.json');
+        readfile('https://api.intakedigital.com/clients/id/checkver.json');
             $content = ob_get_contents();
         ob_clean();
         $ver = json_decode($content);
@@ -46,7 +49,7 @@
 	 * The same is require but with ABTH PATH
 	 */
 	function get_required_file($path = null, $file = null){
-		$base = $_SERVER['DOCUMENT_ROOT'];
+		$base = DOC_ROOT;
 		require($base . $path . $file);
 	}
 
@@ -55,6 +58,11 @@
 	 * Version: 1.0.0
 	 */
 	get_required_file('', '/config.php');
+    
+    /**
+     * Start session
+     */
+    session_start();
 
 
 	/**
@@ -62,7 +70,7 @@
 	 */
 	function api_connect(){
 		ob_start();
-		readfile('https://api.artroman.net/clients/demo/localhost.json');
+		readfile('https://api.intakedigital.com/clients/id/activation.json');
 		$content = ob_get_contents();
 		ob_clean();
 		return $content;
@@ -81,9 +89,11 @@
     if ($api->{'api_key'} == get_option('api_key') && $api->{'serial_number'} == get_option('serial_number')) {
         $apikey_message = get_translate('Activated', 'Активировано');
         $apil_class = ' registered';
+        $activation = true;
     } else {
         $apikey_message = get_translate('Unactivated', 'Не Активировано');
         $apil_class = get_translate(' unregistered', ' unregistered unregistered_ru');
+        $activation = false;
     }
 
 	/**
@@ -177,7 +187,7 @@
 	 * Debug bar
 	 */
 	function debug_bar(){
-		if (get_option('debuger_enabler')) {
+		if (get_option('debuger_enabler') && $activation) {
 			get_required_file('/includes/vendor/', 'debuger.php');
 		}
 	}
@@ -417,3 +427,113 @@
          header('Location: /manager/index.php?page=help&result=success&ticket=' . str_replace('Ticket Number: #', '', $clientTicket));
          exit;
      }
+ 	 
+ 	 /**
+      * Send Campaign
+      */
+ 	 function get_send_campaign(){
+         global $activation;
+         if ($activation) :
+     ?>
+         <div class="testSend">
+             <form action="" method="post">
+                 <p class="formControl">
+                     <input type="email" name="test_email" value="<?php echo get_option('site_email'); ?>" />
+                 </p>
+                 <button type="submit" class="button" name="test_send">
+                     <?php echo get_translate('Test Sending', 'Тестовая отправка'); ?>
+                 </button>
+             </form>
+             <hr>
+             <p class="formControl">
+                 <a href="<?php echo base_url('manager/edit.php?type=campaign&campaign_id=' . $_GET['campaign_id'] . '&action=edit&preparation=send_campaign'); ?>" class="button">
+                     <?php echo get_translate('Proceed To Send', 'Перейти к отправке'); ?>
+                 </a>
+             </p>
+         </div>
+     <?php else : ?>
+         <div class="testSend">
+             <p class="formControl">
+                 <?php echo get_translate('You cannot send promotional campaigns until you activate your copy of the application. To solve the problem, go to the product activation section.', 'Вы не можете отправлять промокампании, пока не активируете свою копию приложения. Для решения проблемы - перейдите в раздел активации продукта.'); ?>
+             </p>
+         </div>
+     <?php
+        endif;
+ 	 }
+    
+    /**
+     * Dashboard NAV
+     */
+    function get_dashboard_nav(){
+        global $activation;
+        ?>
+        <div class="sidebarNav">
+            <div class="engineLogo">
+                <img src="<?php echo get_assets('intakePromotionLogoWhite', 'images', 'png'); ?>" alt="Intake Promotion Service">
+            </div>
+            <div class="navList">
+                <h4><?php echo get_translate('Navigation', 'Навигация'); ?></h4>
+                <ul class="navMenu">
+                    <li class="menuItem <?php if ( !$_GET['page'] == true && !$_GET['type'] == true ) { echo 'active'; } ?>">
+                        <a href="<?php echo base_url('manager/index.php'); ?>"><i class="fas fa-tachometer-alt"></i><?php echo get_translate('Dashboard', 'Главная'); ?></a>
+                    </li>
+                    <?php if ($activation) { ?>
+                        <li class="menuItem <?php if ( $_GET['page'] == 'promos' || $_GET['type'] == 'campaign' ) { echo 'active'; } ?>">
+                            <a href="<?php echo base_url('manager/index.php?page=promos'); ?>"><i class="fas fa-headphones-alt"></i><?php echo get_translate('Promos', 'Промо'); ?></a>
+                        </li>
+                        <li class="menuItem <?php if ( $_GET['page'] == 'artists' ) { echo 'active'; } ?>">
+                            <a href="<?php echo base_url('manager/index.php?page=artists'); ?>"><i class="fas fa-user"></i><?php echo get_translate('Artists', 'Артисты'); ?></a>
+                        </li>
+                        <li class="menuItem <?php if ( $_GET['page'] == 'statistics' ) { echo 'active'; } ?>">
+                            <a href="<?php echo base_url('manager/index.php?page=statistics'); ?>"><i class="fas fa-chart-pie"></i><?php echo get_translate('Statistics', 'Статистика'); ?></a>
+                        </li>
+                        <li class="menuItem <?php if ( $_GET['page'] == 'media-library' ) { echo 'active'; } ?>">
+                            <a href="<?php echo base_url('manager/index.php?page=media-library'); ?>"><i class="fas fa-folder"></i><?php echo get_translate('Media Library', 'Медиа Библиотека'); ?></a>
+                        </li>
+                    <?php } else { ?>
+                        <li class="menuItem unactive" style="opacity: .4;">
+                            <a><i class="fas fa-headphones-alt"></i><?php echo get_translate('Promos', 'Промо'); ?></a>
+                        </li>
+                        <li class="menuItem unactive" style="opacity: .4;">
+                            <a><i class="fas fa-user"></i><?php echo get_translate('Artists', 'Артисты'); ?></a>
+                        </li>
+                        <li class="menuItem unactive" style="opacity: .4;">
+                            <a><i class="fas fa-chart-pie"></i><?php echo get_translate('Statistics', 'Статистика'); ?></a>
+                        </li>
+                        <li class="menuItem unactive" style="opacity: .4;">
+                            <a><i class="fas fa-folder"></i><?php echo get_translate('Media Library', 'Медиа Библиотека'); ?></a>
+                        </li>
+                    <?php } ?>
+                </ul>
+            </div>
+            <div class="navList">
+                <h4><?php echo get_translate('Tools', 'Инструменты'); ?></h4>
+                <ul class="navMenu">
+                    <li class="menuItem <?php if ( $_GET['page'] == 'settings' ) { echo 'active'; } ?>">
+                        <a href="<?php echo base_url('manager/index.php?page=settings'); ?>"><i class="fas fa-tools"></i><?php echo get_translate('Engine Settings', 'Настройки Приложения'); ?></a>
+                    </li>
+                    <li class="menuItem <?php if ( $_GET['page'] == 'account-settings' ) { echo 'active'; } ?>">
+                        <a href="<?php echo base_url('manager/index.php?page=account-settings'); ?>"><i class="fas fa-user-cog"></i><?php echo get_translate('Profile Settings', 'Настройки Профиля'); ?></a>
+                    </li>
+                    <li class="menuItem <?php if ( $_GET['page'] == 'activation' ) { echo 'active'; } ?>">
+                        <a href="<?php echo base_url('manager/index.php?page=activation'); ?>"><i class="fas fa-key"></i><?php echo get_translate('Activation', 'Активация'); ?></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navList">
+                <h4><?php echo get_translate('Information', 'Информация'); ?></h4>
+                <ul class="navMenu">
+                    <li class="menuItem <?php if ( $_GET['page'] == 'help' ) { echo 'active'; } ?>">
+                        <a href="<?php echo base_url('manager/index.php?page=help'); ?>"><i class="fas fa-fire-alt"></i><?php echo get_translate('Help', 'Помощь'); ?></a>
+                    </li>
+                    <li class="menuItem <?php if ( $_GET['page'] == 'faq' ) { echo 'active'; } ?>">
+                        <a href="<?php echo base_url('manager/index.php?page=faq'); ?>"><i class="fas fa-question-circle"></i><?php echo get_translate('FAQ', 'FAQ'); ?></a>
+                    </li>
+                    <li class="menuItem <?php if ( $_GET['page'] == 'about' ) { echo 'active'; } ?>">
+                        <a href="<?php echo base_url('manager/index.php?page=about'); ?>"><i class="fas fa-info-circle"></i><?php echo get_translate('About IPE', 'О Приложении'); ?></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <?php
+    }
